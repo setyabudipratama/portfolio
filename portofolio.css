@@ -1,0 +1,1304 @@
+html,
+body {
+    position: relative;
+    background-color: #d0b2ff;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif
+}
+
+
+/* halaman navbar */
+.navbar-toggler {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.2s ease-in;
+    background-color: #2942c0;
+    transition: background-color 0.3s ease-in;
+    margin-right: 5%;
+    margin-bottom: 1%;
+    color: #ffffff;
+}
+
+/* class navbar-toggler */
+.navbar-toggler:hover {
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+    color: #2942c0;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    outline: none;
+}
+
+/* class navbar */
+.navbar {
+    display: flex;
+    background-color: #1530b3;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+/* class navbar-nav dan class nav-link */
+.navbar-nav,
+.nav-link {
+    margin: 0 10px 0 10px;
+}
+
+/* tag a di navbar */
+nav a,
+.nav-item a {
+    position: relative;
+    /* Mengatur posisi efek hover */
+    color: #ffffff;
+    /* Mengatur warna teks */
+    font-size: 0.8rem;
+    /* Mengatur ukuran teks */
+    transition: all 0.25s;
+    /* Mengatur durasi transisi */
+}
+
+nav a:after,
+.nav-item a:after {
+    position: absolute;
+    /* Mengatur posisi efek after */
+    content: "";
+    inset: 0;
+    background: rgb(255, 255, 255);
+    /* Mengatur warna efek */
+    scale: 0 0;
+    /* Mengatur ukuran efek setelah ditransisi */
+    z-index: -1;
+    transition: all 0.5s ease;
+    /* Mengatur durasi transisi */
+    border-radius: 10px;
+}
+
+nav a:hover,
+.nav-item a:hover {
+    position: relative;
+    /* Mengatur posisi efek hover */
+    width: auto;
+    height: 100%;
+    color: #0026ff;
+    /* merubah warna teks ketika kursor diarahkan */
+}
+
+nav a:hover::after,
+.nav-item a:hover::after {
+    scale: 1 1;
+    /* Mengatur ukuran efek waktu hover dan setelah ditransisi */
+}
+
+/* classfa-toggle-off dan classfa-toggle-on */
+.fa-toggle-off,
+.fa-toggle-on {
+    position: relative;
+    color: #ffffff;
+    margin-left: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* halaman header */
+header {
+    position: relative;
+    /* posisi element header */
+    width: 100vw;
+    /* mengatur lebar element */
+    min-height: 100vh;
+    /* mengatur tinggi element */
+    display: flex;
+    /* mengatur posisi element */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+/* class text */
+header .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* tag h1 */
+header h1 {
+    font-size: 2rem;
+    cursor: not-allowed;
+    color: #00098D;
+    /* background-image: url('gambar/background3.jpg');
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; */
+}
+
+/* tag p */
+header p {
+    color: #00098D;
+    font-size: 1.5rem;
+    cursor: not-allowed;
+    /* background-image: url('gambar/background3.jpg');
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; */
+}
+
+/* class section atau halaman awal untuk semua halaman ketika belum aktif */
+.section {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+}
+
+/* halaman about */
+#about {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    color: #00098D;
+    opacity: 0;
+    transform: translateX(100%); /* Mengatur posisi element awal */
+    transition: all 0.5s ease-in-out;
+}
+
+#about.active {
+    opacity: 1;
+    transform: translateX(0); /* Mengatur posisi element setelah ditransisi */
+}
+
+/* tag h2 */
+#about h2 {
+    position: relative;
+    font-size: 1.5rem;
+}
+
+/* tag h5 dan tag p */
+#about h5,
+#about p {
+    color: #ccd0ff;
+}
+
+/* class box z-index 1 */
+#about .box {
+    position: relative;
+    top: 20%;
+    left: 0;
+    width: 51%;
+    height: 380px;
+    margin: 10px auto 30px auto;
+    z-index: 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* class box z-index 1 */
+#about .box::before {
+    content: '';
+    position: absolute;
+    top: 2%;
+    left: -25%;
+    border-radius: 20px;
+    width: 75%;
+    height: 180px;
+    background: linear-gradient(0deg, transparent, transparent, yellow, yellow, yellow);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+#about .box::after {
+    content: '';
+    position: absolute;
+    top: 2%;
+    left: -25%;
+    border-radius: 20px;
+    width: 75%;
+    height: 180px;
+    background: linear-gradient(0deg, transparent, transparent, yellow, yellow, yellow);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: 3s;
+}
+
+/* class borderline */
+#about .borderline {
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+
+/* class borderline */
+#about .borderline::before {
+    content: '';
+    position: absolute;
+    top: 2%;
+    left: -25%;
+    border-radius: 20px;
+    width: 75%;
+    height: 180px;
+    background: linear-gradient(0deg, transparent, transparent, yellow, yellow, yellow);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+
+/* class borderline */
+#about .borderline::after {
+    content: '';
+    position: absolute;
+    top: 2%;
+    left: -25%;
+    border-radius: 20px;
+    width: 75%;
+    height: 180px;
+    background: linear-gradient(0deg, transparent, transparent, yellow, yellow, yellow);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4s;
+    animation-delay: -4.5s;
+}
+
+/* mengatur animasi */
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* class profil */
+#about .box .profil {
+    position: relative;
+    top: 1%;
+    left: 1%;
+    width: 98%;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+    z-index: 2;
+    background-image: linear-gradient(145deg, #000070 0%, #3700ff 50%, #8883f5 100%);
+    box-shadow: inset 20px 20px 35px #000000;
+}
+
+/* tag img */
+#about .profil img {
+    position: relative;
+    width: 150px;
+    height: auto;
+    border-radius: 70% 40% 40% 70% / 70% 40% 70% 40%;
+    top: -15%;
+    left: 0;
+}
+
+/* tag h5 */
+#about .profil h5 {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    top: -10%;
+    left: 0;
+    font-size: 1.3rem;
+}
+
+/* tag p */
+#about .profil p {
+    position: relative;
+    text-align: center;
+    width: 500px;
+    top: 0;
+    left: 0;
+    font-size: 0.8rem;
+}
+
+
+/* halaman skills */
+#skills {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    border-radius: 20px;
+    color: #00098D;
+    opacity: 0;
+    transform: translateX(-100%); /* Mengatur posisi element awal */
+    transition: all 0.5s ease-in-out;
+}
+
+#skills.active {
+    opacity: 1;
+    transform: translateX(0); /* Mengatur posisi element waktu aktif */
+}
+
+/* tag h2 */
+#skills h2 {
+    position: relative;
+    font-size: 1.7rem;
+}
+
+/* class container */
+#skills .container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* class icon */
+#skills .icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    gap: 5px;
+}
+
+/* tag h5 child pertama */
+#skills h5:first-child {
+    font-size: 1rem;
+    width: 200px;
+    margin: 10px;
+}
+
+/* tag i */
+#skills i {
+    font-size: 3rem;
+}
+
+/* tag h5 child terakhir */
+#skills h5:last-child {
+    font-size: 1rem;
+    width: 200px;
+    margin: 10px;
+}
+
+/* class skill-progress-bg */
+#skills .skill-progress-bg {
+    position: relative;
+    background-color: #000000;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+}
+
+/* id skills-progress-fill z-index 1 */
+#skills #skills-progress-fill {
+    position: relative;
+    background: linear-gradient(to right, #ffffff 0%, #fffb7e 50%, #fffb01 100%);
+    border-radius: 10px;
+    height: 100%;
+    animation: processbar-fill 4s linear;
+}
+
+/* mengatur animasi progress bar */
+@keyframes processbar-fill {
+    from {
+        width: 0; /* awal */
+    }
+
+    to {
+        width: width; /* akhir */
+    }
+}
+
+
+/* halaman projects */
+#projects {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    min-height: 100vh;
+    color: #00098D;
+    opacity: 0;
+    transform: translateX(100%); /* Mengatur posisi element awal */
+    transition: all 0.5s ease-in-out;
+}
+
+#projects.active {
+    opacity: 1;
+    transform: translateX(0); /* Mengatur posisi element waktu aktif */
+    
+}
+
+/* tag h2 */
+#projects h2 {
+    position: relative;
+    font-size: 1.7rem;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* class card */
+#projects .card {
+    flex-grow: 1;
+    flex: 0 0 auto; /* Mengatur anak untuk berpindah ke baris atau kolom baru */
+    margin: 10px 20px auto 20px;
+    width: 280px;
+    height: 340px;
+    background-color: #696ca7;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#projects .card:hover {
+    background-color: #9fa1d5;
+    color: #272727;
+    transition: color 0.3s ease;
+}
+
+/* tag video */
+#projects img {
+    display: flex; /* mengatur posisi video */
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 10px;
+    width: 90%; /* mengatur lebar video */
+    height: auto;
+}
+
+/* class slide */
+#projects .slide {
+    display: flex; /* mengatur posisi child / card */
+    overflow-x: auto; /* Aktifkan scroll horizontal */
+    margin-bottom: 20px;
+}
+
+/* class card-body */
+#projects .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+
+/* halaman contact */
+#contact {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #00098D;
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateX(-100%); /* posisi element awal */
+    transition: all 0.5s ease-in-out;
+}
+
+#contact.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* tag h2 */
+#contact h2 {
+    position: relative;
+    font-size: 1.7rem;
+}
+
+/* class container */
+#contact .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* class form-group */
+#contact .container .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* tag input */
+#contact .form-group input {
+    width: 500px;
+    height: 40px;
+    padding: 0 10px;
+    color: #000000;
+}
+
+/* tag textarea */
+#contact .form-group textarea {
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+}
+
+/* tag label */
+#contact label {
+    padding-left: 10px;
+    margin-top: 5px;
+    color: #00098D;
+}
+
+/* class form-control */
+#contact .form-control {
+    box-shadow: 0 2px 4px rgba(192, 192, 192, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+    border: 3px solid #000000;
+    animation: animateSpin 2s linear infinite; /* menambahkan efek spin */
+}
+
+@keyframes animateSpin {
+    10% {
+        border-color: #ffdb3b;
+        /* warna border berubah */
+    }
+
+    45% {
+        border-color: #fe53bb;
+    }
+
+    67% {
+        border-color: #8f51ea;
+    }
+
+    87% {
+        border-color: #0010f3;
+    }
+}
+
+#contact .form-control:hover {
+    box-shadow: 0 4px 8px rgb(94, 94, 94);
+    border-color: #a9a9a9;
+}
+
+#contact .form-control:focus {
+    box-shadow: 0 4px 8px rgb(94, 94, 94);
+    /* mengatur efek bayangan */
+    border-color: #a9a9a9;
+}
+
+/* class btn */
+#contact .container .btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 0 5px #000000;
+    transition: box-shadow 0.3s ease;
+    background: #3853ff;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+#contact .container .btn:hover {
+    filter: drop-shadow(0 0 10px #ffffff);
+    /* menambahkan efek bayangan */
+    transform: scale(1.1);
+    color: #383838;
+    background-color: #d0b2ff;
+}
+
+#contact .container .btn:active {
+    transform: scale(0.9);
+}
+
+/* halaman footer */
+#footer {
+    width: 100vw;
+    height: 11vh;
+    /* menyesuaikan tinggi footer */
+    background-color: #2942c0;
+    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* class social */
+#footer .social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin-top: 5px;
+}
+
+/* class icon */
+#footer .social .icon {
+    position: relative;
+    background: rgb(0, 3, 174);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* class desc */
+#footer .social .desc {
+    position: absolute;
+    top: 0;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #1530b3;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.1, -0.1, 0.5, 1.5); /* efek transisi text muncul ke atas */
+}
+
+#footer .icon:hover .desc {
+    top: -100%;
+    opacity: 1;
+    background-color: #3d3d3d;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* class whatsapp */
+#footer a .fa-whatsapp {
+    color: rgb(0, 184, 0);
+}
+
+/* class telepon */
+#footer a .fa-phone {
+    color: rgb(255, 255, 255);
+}
+
+/* class email */
+#footer a .fa-envelope {
+    color: rgb(169, 78, 255);
+}
+
+/* class lokasi */
+#footer a .fa-location-dot {
+    color: rgb(255, 255, 255);
+}
+
+#footer .icon:hover .desc,
+#footer .icon:hover .desc::before {
+    color: white;
+}
+
+/* tag i */
+#footer .icon i {
+    font-size: 1.2rem;
+}
+
+/* class link */
+#footer .social .link:hover {
+    position: absolute;
+    top: 28%;
+}
+
+/* tag a */
+#footer a {
+    font-size: 0.8rem;
+}
+
+/* tag tertentu */
+h1,
+h2,
+h3,
+h5,
+p {
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+}
+
+
+/* media query untuk layar kecil */
+@media (max-width: 768px) {
+
+    /* iphone 14 pro max */
+    section {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fa-toggle-off,
+    .fa-toggle-on {
+        position: relative;
+        color: #ffffff;
+        top: 0;
+        left: 15%;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    header p {
+        font-size: 0.75rem;
+    }
+
+    #about h2 {
+        font-size: 1.5rem;
+        top: -50px;
+        left: 0;
+    }
+
+    #about .container {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    #about .box {
+        position: relative;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        width: 80%;
+        height: 300px;
+        margin: 20px auto 20px auto;
+        z-index: 1;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    #about .box::before {
+        top: 10%;
+        left: -25%;
+        width: 75%;
+        height: 120px;
+    }
+
+    #about .box::after {
+        top: 10%;
+        left: -25%;
+        width: 75%;
+        height: 120px;
+    }
+
+    #about .borderline::before {
+        top: 10%;
+        left: -25%;
+        width: 75%;
+        height: 120px;
+    }
+
+    #about .borderline::after {
+        top: 10%;
+        left: -25%;
+        width: 75%;
+        height: 120px;
+    }
+
+    #about .box .profil {
+        position: relative;
+        top: 1%;
+        left: 1%;
+        width: 98%;
+        height: 98%;
+    }
+
+    #about .profil img {
+        width: 100px;
+        height: auto;
+        border-radius: 50% 30% 30% 50% / 50% 30% 50% 30%;
+        top: -10%;
+        left: 0;
+    }
+
+    #about .profil h5 {
+        width: 200px;
+        font-size: 1rem;
+        top: -10%;
+        left: 0;
+    }
+
+    #about .profil p {
+        width: 300px;
+        font-size: 0.8rem;
+        top: 0;
+        left: 0;
+    }
+
+    #skills h2 {
+        position: relative;
+        font-size: 1.5rem;
+    }
+
+    #skills .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #projects h2 {
+        position: relative;
+        font-size: 1.5rem;
+        margin-top: 150px;
+    }
+
+    #projects .slide {
+        position: relative;
+        margin-top: -200px;
+    }
+
+    #project .card {
+        width: 60%;
+        height: 60%;
+    }
+
+    #project video {
+        width: 90%;
+        height: auto;
+    }
+
+    #contact .form-group {
+        width: 100%;
+        top: 0%;
+        left: 0;
+    }
+
+    #contact .form-group input {
+        width: 100%;
+    }
+
+    #contact .form-group textarea {
+        width: 100%;
+    }
+
+    #contact .form-group .btn {
+        margin: 40px 5px 0 0;
+    }
+
+    #footer {
+        width: 100%;
+        height: 9vh;
+    }
+
+    #footer .social {
+        position: relative;
+        top: 10%;
+        right: 4%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+@media (max-width: 412px) {
+
+    /* samsung s20 ultra */
+    section {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fa-toggle-off,
+    .fa-toggle-on {
+        position: relative;
+        color: #ffffff;
+        top: 0;
+        left: 15%;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    header p {
+        font-size: 0.75rem;
+    }
+
+    #about h2 {
+        font-size: 1.5rem;
+        top: -50px;
+        left: 0;
+    }
+
+    #about .container {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    #about .box {
+        position: relative;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        width: 80%;
+        height: 300px;
+        margin: 20px auto 20px auto;
+        z-index: 1;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    #about .box::before {
+        top: 10%;
+        left: -25%;
+        width: 75%;
+        height: 120px;
+    }
+
+    #about .box::after {
+        top: 10%;
+        left: -25%;
+        width: 75%;
+        height: 120px;
+    }
+
+    #about .borderline::before {
+        top: 10%;
+        left: -25%;
+        width: 75%;
+        height: 120px;
+    }
+
+    #about .borderline::after {
+        top: 10%;
+        left: -25%;
+        width: 75%;
+        height: 120px;
+    }
+
+    #about .box .profil {
+        position: relative;
+        top: 1%;
+        left: 1%;
+        width: 98%;
+        height: 98%;
+    }
+
+    #about .profil img {
+        width: 100px;
+        height: auto;
+        border-radius: 50% 30% 30% 50% / 50% 30% 50% 30%;
+        top: -10%;
+        left: 0;
+    }
+
+    #about .profil h5 {
+        width: 200px;
+        font-size: 1rem;
+        top: -10%;
+        left: 0;
+    }
+
+    #about .profil p {
+        width: 300px;
+        font-size: 0.8rem;
+        top: 0;
+        left: 0;
+    }
+
+    #skills h2 {
+        position: relative;
+        font-size: 1.5rem;
+    }
+
+    #skills .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #projects h2 {
+        position: relative;
+        font-size: 1.5rem;
+        margin-top: 150px;
+    }
+
+    #projects .slide {
+        position: relative;
+        margin-top: -200px;
+    }
+
+    #project .card {
+        width: 60%;
+        height: 60%;
+    }
+
+    #project video {
+        width: 90%;
+        height: auto;
+    }
+
+    #contact .form-group {
+        width: 100%;
+        top: 0%;
+        left: 0;
+    }
+
+    #contact .form-group input {
+        width: 100%;
+    }
+
+    #contact .form-group textarea {
+        width: 100%;
+    }
+
+    #contact .form-group .btn {
+        margin: 40px 5px 0 0;
+    }
+
+    #footer {
+        width: 100%;
+        height: 9vh;
+    }
+
+    #footer .social {
+        position: relative;
+        top: 10%;
+        right: 5%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* ipad mini */
+    section {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fa-toggle-off,
+    .fa-toggle-on {
+        position: relative;
+        color: #ffffff;
+        top: 0;
+        left: 30%;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    header p {
+        font-size: 0.75rem;
+    }
+
+    #about h2 {
+        font-size: 1.5rem;
+        top: -50px;
+        left: 0;
+    }
+
+    #about .container {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    #about .box {
+        position: relative;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        width: 60%;
+        /* mengatur lebar element */
+        height: 300px;
+        /* mengatur tinggi element */
+        margin: 20px auto 20px auto;
+        z-index: 1;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    #about .box::before {
+        top: 10%;
+        left: -25%;
+        width: 75%;
+        height: 120px;
+    }
+
+    #about .box::after {
+        top: 10%;
+        left: -25%;
+        width: 75%;
+        height: 120px;
+    }
+
+    #about .borderline::before {
+        top: 10%;
+        left: -25%;
+        width: 75%;
+        height: 120px;
+    }
+
+    #about .borderline::after {
+        top: 10%;
+        left: -25%;
+        width: 75%;
+        height: 120px;
+    }
+
+    #about .box .profil {
+        position: relative;
+        top: 1%;
+        left: 1%;
+        width: 98%;
+        height: 98%;
+    }
+
+    #about .profil img {
+        width: 100px;
+        height: auto;
+        border-radius: 50% 30% 30% 50% / 50% 30% 50% 30%;
+        top: -10%;
+        left: 0;
+    }
+
+    #about .profil h5 {
+        width: 200px;
+        font-size: 1rem;
+        top: -10%;
+        left: 0;
+    }
+
+    #about .profil p {
+        width: 300px;
+        font-size: 0.8rem;
+        top: 0;
+        left: 0;
+    }
+
+    #skills h2 {
+        position: relative;
+        font-size: 1.5rem;
+    }
+
+    #skills .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #projects h2 {
+        position: relative;
+        font-size: 1.5rem;
+        margin-top: 150px;
+    }
+
+    #projects .slide {
+        position: relative;
+        margin-top: -200px;
+    }
+
+    #project .card {
+        width: 40%;
+        height: 60%;
+    }
+
+    #project video {
+        width: 90%;
+        height: auto;
+    }
+
+    #contact .container {
+        width: 100%;
+        top: 0;
+        right: 0;
+    }
+    
+    #contact .form-group {
+        width: 100%;
+        top: 0;
+        right: 0;
+        margin-right: 300px;
+    }
+
+    #contact .form-group input {
+        width: 100%;
+    }
+
+    #contact .form-group textarea {
+        width: 100%;
+    }
+
+    #contact .form-group .btn {
+        margin: 40px 5px 0 0;
+    }
+
+    #footer {
+        width: 100%;
+        height: 9vh;
+    }
+
+    #footer .social {
+        position: relative;
+        top: 15%;
+        right: 2%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
