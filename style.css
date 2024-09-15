@@ -490,15 +490,60 @@ header p {
     transition: color 0.3s ease;
 }
 
-/* tag video */
-#projects img {
+/* class desc */
+#projects .desc {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* tag h5 */
+#projects .desc h5 {
+    position: absolute;
+    top: 65px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 0.5s ease;
+}
+
+/* tag p */
+#projects .desc p {
+    position: absolute;
+    top: 90px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+}
+
+/* tag img */
+#projects .desc img {
     display: flex; /* mengatur posisi video */
     justify-content: center;
     align-items: center;
     margin: auto;
     padding-top: 10px;
-    width: 90%; /* mengatur lebar video */
-    height: auto;
+    width: 100%; /* mengatur lebar video */
+    height: 100%;
+    transition: 0.5s ease;
+}
+
+#projects .desc img:hover + h5,
+#projects .desc img:hover + h5 + p {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#projects .desc:hover img{
+    filter: brightness(0.8);
+    scale: 1.1;
 }
 
 /* class slide */
