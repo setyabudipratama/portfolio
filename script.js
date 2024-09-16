@@ -165,3 +165,32 @@ Git.removeAttribute('class');
 Git.setAttribute('class', 'fa-brands fa-github');
 // ubah warna
 Git.style.color = 'white';
+
+
+// ambil parent
+const telepon = document.querySelector('#footer .social li:nth-child(3)');
+// hapus kelas
+telepon.removeAttribute('class');
+// tambah kelas baru
+telepon.setAttribute('class', 'icon linkIn');
+
+// ambil parent
+const textLinkIn = document.querySelector('.icon:nth-child(3) .desc');
+// hapus teks
+textLinkIn.innerHTML = '';
+// buat teks
+textLinkIn.innerHTML = 'setya budi';
+
+// ambil parent
+const aLinkIn = document.querySelector('#footer .social li:nth-child(3) a');
+// tambah teks
+aLinkIn.href = 'https://www.linkedin.com/in/setya-budi-b08623317/';
+
+// ambil parent
+const linkIn = document.querySelector('#footer .social li:nth-child(3) i');
+// hapus kelas
+linkIn.removeAttribute('class');
+// tambah kelas baru
+linkIn.setAttribute('class', 'fa-brands fa-linkedin');
+// ubah warna
+linkIn.style.color = 'purple';
