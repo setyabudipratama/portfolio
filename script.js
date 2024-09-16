@@ -155,7 +155,7 @@ textGit.innerHTML = 'setyabudipratama';
 // ambil parent
 const aGit = document.querySelector('#footer li:last-child a');
 // tambah teks
-aGit.href = 'https://github.com/setyabudipratama';
+aGit.href = 'https://github.com/setyabudipratama/project.git';
 
 // ambil parent
 const Git = document.querySelector('#footer li:last-child i');
