@@ -193,4 +193,4 @@ linkIn.removeAttribute('class');
 // tambah kelas baru
 linkIn.setAttribute('class', 'fa-brands fa-linkedin');
 // ubah warna
-linkIn.style.color = 'purple';
+linkIn.style.color = 'skyblue';
