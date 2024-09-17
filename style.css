@@ -130,7 +130,7 @@ header .text {
 header h1 {
     font-size: 2rem;
     cursor: not-allowed;
-    color: #00098D;
+    color: #D0B1FF;
     /* background-image: url('gambar/background3.jpg');
     background-size: cover;
     background-clip: text;
@@ -140,7 +140,7 @@ header h1 {
 
 /* tag p */
 header p {
-    color: #00098D;
+    color: #D0B1FF;
     font-size: 1.5rem;
     cursor: not-allowed;
     /* background-image: url('gambar/background3.jpg');
