@@ -54,8 +54,6 @@ icons.forEach(icon => {
 });
 
 //ambil element yang dibutuhkan pada waktu mode siang dan malam
-const header = document.querySelector('header h1');
-const headerP = document.querySelector('#jumbotron p');
 const h2 = document.querySelectorAll('section.py-5 h2');
 const label = document.querySelectorAll('section.py-5 label');
 const skillsh5 = document.querySelectorAll('#skills h5');
@@ -87,8 +85,6 @@ lamp.addEventListener('click', function (event) {
     }
 
     body.style.backgroundColor = isNightMode ? colors.night.background : colors.day.background;
-    header.style.color = header.style.color = colors[isNightMode ? 'night' : 'day'].text;
-    headerP.style.color = headerP.style.color = colors[isNightMode ? 'night' : 'day'].text;
     skillsh5.forEach(l => l.style.color = colors[isNightMode ? 'night' : 'day'].text);
     label.forEach(l => l.style.color = colors[isNightMode ? 'night' : 'day'].text);
     h2.forEach(h => h.style.color = colors[isNightMode ? 'night' : 'day'].text);
