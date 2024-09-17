@@ -101,7 +101,7 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    background: url('gambar/trawas.jpg') no-repeat center center/cover;
+    background: url('gambar/trawas2.jpg') no-repeat center center/cover;
     background-blend-mode: darken;
     z-index: 0;
 }
