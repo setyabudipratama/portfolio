@@ -498,6 +498,17 @@ header p {
     transition: color 0.3s ease;
 }
 
+#projects .card:hover > .desc h5,
+#projects .card:hover > .desc h5 + p {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#projects .card:hover > .desc img{
+    filter: brightness(0.8);
+    scale: 1.1;
+}
+
 /* class desc */
 #projects .desc {
     position: relative;
@@ -542,18 +553,6 @@ header p {
     height: 100%;
     transition: 0.5s ease;
 }
-
-#projects .desc img:hover + h5,
-#projects .desc img:hover + h5 + p {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-#projects .desc:hover img{
-    filter: brightness(0.8);
-    scale: 1.1;
-}
-
 
 /* class slide */
 #projects .slide {
