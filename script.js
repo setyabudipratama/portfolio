@@ -93,7 +93,7 @@ lamp.addEventListener('click', function (event) {
 // buat tag li baru
 const liBaru = document.createElement('li');
 // ambil parent
-const ul = document.querySelector('#footer .social');
+const ul = document.querySelector('footer .social');
 // ambil sibling
 const li1 = document.querySelector('.social li:first-child');
 // masukkan tag li baru antara parent dengan sibling
@@ -149,12 +149,12 @@ textGit.innerHTML = '';
 textGit.innerHTML = 'setyabudipratama';
 
 // ambil parent
-const aGit = document.querySelector('#footer li:last-child a');
+const aGit = document.querySelector('footer li:last-child a');
 // tambah teks
 aGit.href = 'https://github.com/setyabudipratama/project.git';
 
 // ambil parent
-const Git = document.querySelector('#footer li:last-child i');
+const Git = document.querySelector('footer li:last-child i');
 // hapus kelas
 Git.removeAttribute('class');
 // tambah kelas baru
@@ -164,7 +164,7 @@ Git.style.color = 'white';
 
 
 // ambil parent
-const telepon = document.querySelector('#footer .social li:nth-child(3)');
+const telepon = document.querySelector('footer .social li:nth-child(3)');
 // hapus kelas
 telepon.removeAttribute('class');
 // tambah kelas baru
@@ -178,12 +178,12 @@ textLinkIn.innerHTML = '';
 textLinkIn.innerHTML = 'setya budi';
 
 // ambil parent
-const aLinkIn = document.querySelector('#footer .social li:nth-child(3) a');
+const aLinkIn = document.querySelector('footer .social li:nth-child(3) a');
 // tambah teks
 aLinkIn.href = 'https://www.linkedin.com/in/setya-budi-b08623317/';
 
 // ambil parent
-const linkIn = document.querySelector('#footer .social li:nth-child(3) i');
+const linkIn = document.querySelector('footer .social li:nth-child(3) i');
 // hapus kelas
 linkIn.removeAttribute('class');
 // tambah kelas baru
