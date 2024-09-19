@@ -1034,7 +1034,7 @@ p {
     }
 
     footer .social .icon:first-child,
-    footer .social .icon:nth-child(5) {
+    footer .social .icon:last-child {
         top: 15px;
     }
 
@@ -1301,7 +1301,7 @@ p {
     }
 
     footer .social .icon:first-child,
-    footer .social .icon:nth-child(5) {
+    footer .social .icon:last-child {
         top: 10px;
     }
 
