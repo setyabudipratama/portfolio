@@ -108,6 +108,7 @@ header p {
     margin-left: 20px;
     font-size: 1.5rem;
     cursor: pointer;
+    filter: drop-shadow(5px 5px 10px #000000);
 }
 
 /* halaman about */
@@ -866,7 +867,7 @@ p {
         position: relative;
         color: #ffffff;
         top: -3px;
-        left: 10%;
+        left: 8%;
     }
 
     #about {
