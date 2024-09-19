@@ -1,103 +1,20 @@
 html,
 body {
     position: relative;
+    box-sizing: border-box;
     background-color: #d0b2ff;
-    overflow-x: hidden;
     font-family: Arial, sans-serif
 }
 
-
-/* halaman navbar */
-.navbar-toggler {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 0.2s ease-in;
-    background-color: #2942c0;
-    transition: background-color 0.3s ease-in;
-    margin-right: 5%;
-    margin-bottom: 1%;
-    color: #ffffff;
-}
-
-/* class navbar-toggler */
-.navbar-toggler:hover {
-    background-color: #ffffff;
-    box-shadow: 0 8px 16px rgb(0, 0, 0);
-    color: #2942c0;
-}
-
-.navbar-toggler:active,
-.navbar-toggler:focus {
-    outline: none;
-}
-
-/* class navbar */
-.navbar {
-    display: flex;
-    background-color: #1530b3;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
-}
-
-/* class navbar-nav dan class nav-link */
-.navbar-nav,
-.nav-link {
-    margin: 0 10px 0 10px;
-}
-
-/* tag a di navbar */
-nav a,
-.nav-item a {
-    position: relative;
-    color: #ffffff;
-    font-size: 0.8rem;
-    border-radius: 10px;
-    transition: all 0.25s;
-}
-
-/* nav a:after,
-.nav-item a:after {
-    position: absolute;
-    content: "";
-    inset: 0;
-    background: rgb(255, 255, 255);
-    scale: 0 0;
-    z-index: -1;
-    transition: all 0.5s ease;
-    border-radius: 10px;
-} */
-
-nav a:hover,
-.nav-item a:hover {
-    position: relative;
-    width: auto;
-    height: 100%;
-    color: #0026ff;
-    background-color: #ffffff;
-    border-radius: 10px;
-}
-
-/* nav a:hover::after,
-.nav-item a:hover::after {
-    scale: 1 1;
-} */
-
-/* classfa-toggle-off dan classfa-toggle-on */
-.fa-toggle-off,
-.fa-toggle-on {
-    position: relative;
-    color: #ffffff;
-    margin-left: 20px;
-    font-size: 1.5rem;
-    cursor: pointer;
+* {
+    box-sizing: border-box;
 }
 
 /* halaman header */
 header {
     position: relative;
-    top: 35px;
-    width: 100vw;
-    min-height: 90vh;
+    width: 100%;
+    height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,18 +24,6 @@ header {
     z-index: 0;
 }
 
-header::before {
-    content: '';
-    position: absolute;
-    top: auto;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: inset 120px 100px 200px #000000, inset -120px -100px 200px #000000;
-    z-index: -1;
-}
-
 /* class text */
 header .text {
     display: flex;
@@ -126,6 +31,11 @@ header .text {
     align-items: center;
     flex-direction: column;
     font-family: 'Pacifico';
+    background: transparent;
+    backdrop-filter: blur(1rem);
+    padding: 5px;
+    margin: 0 250px;
+    border-radius: 10px;
 }
 
 /* tag h1 */
@@ -152,32 +62,65 @@ header p {
     color: transparent; */
 }
 
-/* class section atau halaman awal untuk semua halaman ketika belum aktif */
-.section {
-    opacity: 0;
-    transform: translateX(100%);
-    transition: all 0.5s ease-in-out;
+
+/* halaman navbar */
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 7vh;
+    background-color: #1530b3;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    z-index: 1000; /*agar selalu diatas elemen lain*/
+}
+
+/* tag a di navbar */
+.navbar a,
+.navbar .navbar-nav .nav-item a {
+    color: #ffffff;
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    transition: all 0.25s;
+}
+
+.navbar a:hover,
+.navbar .navbar-nav .nav-item a:hover {
+    width: auto;
+    height: 100%;
+    color: #0026ff;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* classfa-toggle-off dan classfa-toggle-on */
+.fa-toggle-off,
+.fa-toggle-on {
+    color: #ffffff;
+    margin-left: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* halaman about */
 #about {
     position: relative;
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0;
     color: #00098D;
-    opacity: 0;
-    transform: translateX(100%); /* Mengatur posisi element awal */
-    transition: all 0.5s ease-in-out;
-}
-
-#about.active {
-    opacity: 1;
-    transform: translateX(0); /* Mengatur posisi element setelah ditransisi */
 }
 
 /* tag h2 */
@@ -204,7 +147,15 @@ header p {
     z-index: 1;
     border-radius: 20px;
     overflow: hidden;
+    /* opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out; */
 }
+
+/* #about .box.active {
+    opacity: 1;
+    transform: translateX(0);
+} */
 
 /* class box z-index 1 */
 #about .box::before {
@@ -338,7 +289,7 @@ header p {
 /* halaman skills */
 #skills {
     position: relative;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -347,15 +298,15 @@ header p {
     row-gap: 20px;
     border-radius: 20px;
     color: #00098D;
-    opacity: 0;
-    transform: translateX(-100%); /* Mengatur posisi element awal */
-    transition: all 0.5s ease-in-out;
+    /* opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out; */
 }
 
-#skills.active {
+/* #skills.active {
     opacity: 1;
-    transform: translateX(0); /* Mengatur posisi element waktu aktif */
-}
+    transform: translateX(0);
+} */
 
 /* tag h2 */
 #skills h2 {
@@ -440,19 +391,18 @@ header p {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     color: #00098D;
-    opacity: 0;
-    transform: translateX(100%); /* Mengatur posisi element awal */
-    transition: all 0.5s ease-in-out;
+    /* opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out; */
 }
 
-#projects.active {
+/* #projects.active {
     opacity: 1;
-    transform: translateX(0); /* Mengatur posisi element waktu aktif */
-    
-}
+    transform: translateX(0);
+} */
 
 #projects .title {
     display: flex;
@@ -554,6 +504,7 @@ header p {
     transition: 0.5s ease;
 }
 
+
 /* class slide */
 #projects .slide {
     display: flex; /* mengatur posisi child / card */
@@ -574,7 +525,7 @@ header p {
 /* halaman contact */
 #contact {
     position: relative;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -582,15 +533,15 @@ header p {
     align-items: center;
     color: #00098D;
     border-radius: 20px;
-    opacity: 0;
-    transform: translateX(-100%); /* posisi element awal */
-    transition: all 0.5s ease-in-out;
+    /* opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out; */
 }
 
-#contact.active {
+/* #contact.active {
     opacity: 1;
     transform: translateX(0);
-}
+} */
 
 /* tag h2 */
 #contact h2 {
@@ -708,8 +659,8 @@ header p {
 }
 
 /* halaman footer */
-#footer {
-    width: 100vw;
+footer {
+    width: 100%;
     height: 11vh;
     /* menyesuaikan tinggi footer */
     background-color: #2942c0;
@@ -717,10 +668,11 @@ header p {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 1;
 }
 
 /* class social */
-#footer .social {
+footer .social {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -729,7 +681,7 @@ header p {
 }
 
 /* class icon */
-#footer .social .icon {
+footer .social .icon {
     position: relative;
     background: rgb(0, 3, 174);
     border-radius: 50%;
@@ -744,7 +696,7 @@ header p {
 }
 
 /* class desc */
-#footer .social .desc {
+footer .social .desc {
     position: absolute;
     top: 0;
     font-size: 1rem;
@@ -757,7 +709,7 @@ header p {
     transition: all 0.3s cubic-bezier(0.1, -0.1, 0.5, 1.5); /* efek transisi text muncul ke atas */
 }
 
-#footer .icon:hover .desc {
+footer .icon:hover .desc {
     top: -100%;
     opacity: 1;
     background-color: #3d3d3d;
@@ -766,43 +718,43 @@ header p {
 }
 
 /* class whatsapp */
-#footer a .fa-whatsapp {
+footer a .fa-whatsapp {
     color: rgb(0, 184, 0);
 }
 
 /* class telepon */
-#footer a .fa-phone {
+footer a .fa-phone {
     color: rgb(255, 255, 255);
 }
 
 /* class email */
-#footer a .fa-envelope {
+footer a .fa-envelope {
     color: rgb(169, 78, 255);
 }
 
 /* class lokasi */
-#footer a .fa-location-dot {
+footer a .fa-location-dot {
     color: rgb(255, 255, 255);
 }
 
-#footer .icon:hover .desc,
-#footer .icon:hover .desc::before {
+footer .icon:hover .desc,
+footer .icon:hover .desc::before {
     color: white;
 }
 
 /* tag i */
-#footer .icon i {
+footer .icon i {
     font-size: 1.2rem;
 }
 
 /* class link */
-#footer .social .link:hover {
+footer .social .link:hover {
     position: absolute;
     top: 28%;
 }
 
 /* tag a */
-#footer a {
+footer a {
     font-size: 0.8rem;
 }
 
@@ -818,38 +770,23 @@ p {
 }
 
 
-@media (max-width: 768px) {
-
-    /* iphone 14 pro max */
+@media only screen and (max-width: 767px) {
     section {
         width: 100%;
         height: auto;
     }
 
-    .nav-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .fa-toggle-off,
-    .fa-toggle-on {
-        position: relative;
-        color: #ffffff;
-        top: 0;
-        left: 15%;
+    header .text {
+        padding: 0;
+        margin: 0;
     }
 
     header {
         position: relative;
-        top: 10px;
+        top: 0;
         left: 0;
         width: 100%;
-        height: 92vh;
-    }
-
-    header::before {
-        box-shadow: inset 20px 20px 200px #000000, inset -20px -20px 200px #000000;
+        height: 20vh;
     }
 
     header h1 {
@@ -860,9 +797,80 @@ p {
         font-size: 0.6rem;
     }
 
+    .navbar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 5vh;
+        background-color: #2942c0;
+        z-index: 1000;
+    }
+
+    .navbar a {
+        position: relative;
+        top: -5px;
+        left: 0;
+    }
+
+    .navbar .navbar-toggler {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        transition: box-shadow 0.2s ease-in;
+        background-color: #2942c0;
+        transition: background-color 0.3s ease-in;
+        position: relative;
+        top: -5px;
+        color: #ffffff;
+    }
+    
+    /* class navbar-toggler */
+    .navbar .navbar-toggler:hover {
+        background-color: #ffffff;
+        box-shadow: 0 8px 16px rgb(0, 0, 0);
+        color: #2942c0;
+    }
+    
+    .navbar-toggler:active,
+    .navbar-toggler:focus {
+        outline: none;
+    }
+    
+    /* class navbar-nav dan class nav-link */
+    .navbar-nav,
+    .nav-link {
+        margin: 5px 10px 0 10px;
+    }
+
+    .navbar .nav-item .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2942c0;
+        margin-top: 10px;
+        position: relative;
+        top: 0;
+        left: 1%;
+    }
+
+    .fa-toggle-off,
+    .fa-toggle-on {
+        position: relative;
+        color: #ffffff;
+        top: -3px;
+        left: 10%;
+    }
+
+    #about {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 75vh;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
     #about h2 {
         font-size: 1.5rem;
-        top: -50px;
+        top: -30px;
         left: 0;
     }
 
@@ -1000,15 +1008,15 @@ p {
         margin: 40px 5px 0 0;
     }
 
-    #footer {
+    footer {
         width: 100%;
         height: 9vh;
     }
 
-    #footer .social {
+    footer .social {
         position: relative;
         top: 5%;
-        right: 4%;
+        right: 5%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -1016,50 +1024,107 @@ p {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
-    /* ipad mini */
     section {
         width: 100%;
         height: auto;
     }
 
+    header {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 20vh;
+    }
+    
+    header .text {
+        padding: 0;
+        margin: 0;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.6rem;
+    }
+
+    .navbar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 5vh;
+        background-color: #2942c0;
+        z-index: 1000;
+    }
+
+    .navbar a {
+        position: relative;
+        top: -5px;
+        left: -50px;
+    }
+
+    .navbar .navbar-toggler {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        transition: box-shadow 0.2s ease-in;
+        background-color: #2942c0;
+        transition: background-color 0.3s ease-in;
+        position: relative;
+        top: -5px;
+        right: -50px;
+        color: #ffffff;
+    }
+    
+    /* class navbar-toggler */
+    .navbar .navbar-toggler:hover {
+        background-color: #ffffff;
+        box-shadow: 0 8px 16px rgb(0, 0, 0);
+        color: #2942c0;
+    }
+    
+    .navbar-toggler:active,
+    .navbar-toggler:focus {
+        outline: none;
+    }
+    
+    /* class navbar-nav dan class nav-link */
+    .navbar-nav,
     .nav-link {
+        margin: 5px 10px 0 10px;
+    }
+
+    .navbar .nav-item .nav-link {
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #2942c0;
+        margin-top: 10px;
+        position: relative;
+        top: 0;
+        left: 1%;
     }
 
     .fa-toggle-off,
     .fa-toggle-on {
         position: relative;
         color: #ffffff;
-        top: 0;
-        left: 30%;
+        top: -3px;
+        right: -20%;
     }
 
-    header {
+    #about {
         position: relative;
-        top: 10px;
-        left: 0;
+        top: 0;
         width: 100%;
-        height: 92vh;
-    }
-
-    header::before {
-        box-shadow: inset 50px 50px 150px #000000, inset -50px -50px 150px #000000;
-    }
-
-    header h1 {
-        font-size: 1.3rem;
-    }
-
-    header p {
-        font-size: 0.75rem;
+        height: 75vh;
+        opacity: 1;
+        transform: translateX(0);
     }
 
     #about h2 {
         font-size: 1.5rem;
-        top: -50px;
+        top: -30px;
         left: 0;
     }
 
@@ -1075,9 +1140,7 @@ p {
         left: 0;
         border-radius: 20px;
         width: 60%;
-        /* mengatur lebar element */
         height: 300px;
-        /* mengatur tinggi element */
         margin: 20px auto 20px auto;
         z-index: 1;
         border-radius: 20px;
@@ -1131,12 +1194,12 @@ p {
     #about .profil h5 {
         width: 200px;
         font-size: 1rem;
-        top: -10%;
+        top: -8%;
         left: 0;
     }
 
     #about .profil p {
-        width: 300px;
+        width: 250px;
         font-size: 0.8rem;
         top: 0;
         left: 0;
@@ -1156,19 +1219,23 @@ p {
         gap: 5px;
     }
 
+    #projects .title {
+        position: relative;
+        top: 0;
+    }
+
     #projects h2 {
         position: relative;
         font-size: 1.5rem;
-        margin-top: 150px;
     }
 
     #projects .slide {
         position: relative;
-        margin-top: -200px;
+        margin-top: -50px;
     }
 
     #project .card {
-        width: 40%;
+        width: 60%;
         height: 60%;
     }
 
@@ -1177,17 +1244,10 @@ p {
         height: auto;
     }
 
-    #contact .container {
-        width: 100%;
-        top: 0;
-        right: 0;
-    }
-    
     #contact .form-group {
         width: 100%;
-        top: 0;
-        right: 0;
-        margin-right: 300px;
+        top: 0%;
+        left: 0;
     }
 
     #contact .form-group input {
@@ -1202,15 +1262,15 @@ p {
         margin: 40px 5px 0 0;
     }
 
-    #footer {
+    footer {
         width: 100%;
         height: 9vh;
     }
 
-    #footer .social {
+    footer .social {
         position: relative;
         top: 15%;
-        right: 2%;
+        right: 3%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
