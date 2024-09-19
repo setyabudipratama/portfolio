@@ -638,9 +638,10 @@ header p {
 
 /* tag h5 */
 #sertifikat .card-body h5 {
-    color: #D0B1FF;
-    posisition: relatitive;
+    color: #FFFFFF;
+    posisition: relative;
     font-size: 1.5rem;
+}
 
 
 /* halaman contact */
