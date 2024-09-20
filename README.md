@@ -34,15 +34,14 @@ The Berne Convention is an international agreement that protects literary and ar
 2. **Universal Copyright Convention (UCC)**
 
 The UCC was adopted by UNESCO as an alternative to the Berne Convention for countries that are not part of the Berne Union.
-Universal Copyright Convention on UNESCO
 
 3. **World Intellectual Property Organization (WIPO) Copyright Treaty**
 
 These treaties strengthen copyright protection in the context of information technology and digital rights.
-About the WIPO Copyright Treaty
 
 ## Sumber Hukum di Indonesia
-Undang-Undang No. 28 Tahun 2014 tentang Hak Cipta
+
+**Undang-Undang No. 28 Tahun 2014 tentang Hak Cipta**
 
 Di Indonesia, hak cipta dilindungi oleh Undang-Undang No. 28 tahun 2014. Undang-undang ini memberikan perlindungan terhadap karya-karya berhak cipta di bidang ilmu pengetahuan, seni, dan sastra.
 
