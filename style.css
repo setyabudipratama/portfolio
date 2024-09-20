@@ -34,8 +34,18 @@ header .text {
     background: transparent;
     backdrop-filter: blur(1rem);
     padding: 5px;
-    margin: 0 250px;
+    margin: 0 300px;
     border-radius: 10px;
+}
+
+header .text h1 {
+    color: #ffffff;
+    text-shadow: 0 0 10px cyan;
+}
+
+header .text p {
+    color: #ffffff;
+    text-shadow: 0 0 5px cyan;
 }
 
 /* tag h1 */
@@ -636,12 +646,6 @@ header p {
     padding: 5px;
 }
 
-/* tag h5 */
-#sertifikat .card-body h5 {
-    posisition: relative;
-    font-size: 1rem;
-}
-
 
 /* halaman contact */
 #contact {
@@ -908,8 +912,8 @@ p {
     }
 
     header .text {
-        padding: 0;
-        margin: 0;
+        padding: 5px;
+        margin: 0 25px;
     }
 
     header {
@@ -925,7 +929,7 @@ p {
     }
 
     header p {
-        font-size: 0.6rem;
+        font-size: 0.4rem;
     }
 
     .navbar {
@@ -1177,8 +1181,8 @@ p {
     }
 
     header .text {
-        padding: 0;
-        margin: 0;
+        padding: 5px;
+        margin: 0 150px;
     }
 
     header h1 {
@@ -1186,7 +1190,7 @@ p {
     }
 
     header p {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
     }
 
     .navbar {
