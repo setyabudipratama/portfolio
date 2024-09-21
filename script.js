@@ -7,6 +7,22 @@
 
 // This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
 
+// The Berne Convention is an international agreement that protects literary and artistic works globally. Every member country must provide automatic protection for copyrighted works without requiring registration.
+
+// Universal Copyright Convention (UCC)
+
+// The UCC was adopted by UNESCO as an alternative to the Berne Convention for countries that are not part of the Berne Union.
+
+// World Intellectual Property Organization (WIPO) Copyright Treaty
+
+// These treaties strengthen copyright protection in the context of information technology and digital rights.
+
+// Sumber Hukum di Indonesia
+
+// Undang-Undang No. 28 Tahun 2014 tentang Hak Cipta
+
+// Di Indonesia, hak cipta dilindungi oleh Undang-Undang No. 28 tahun 2014. Undang-undang ini memberikan perlindungan terhadap karya-karya berhak cipta di bidang ilmu pengetahuan, seni, dan sastra.
+
 // mengambil semua elemen dengan kelas 'nav-link'
 const click = document.querySelectorAll('.nav-link');
 
