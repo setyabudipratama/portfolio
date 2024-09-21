@@ -858,6 +858,7 @@ header p {
     font-weight: bold;
     border: none;
     cursor: pointer;
+    opacity: 1;
     transition: all 0.3s ease;
 }
 
