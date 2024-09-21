@@ -911,7 +911,7 @@ p {
 
     header .text {
         padding: 5px;
-        margin: 0 25px;
+        margin: 0 16px;
     }
 
     header {
@@ -927,7 +927,7 @@ p {
     }
 
     header p {
-        font-size: 0.4rem;
+        font-size: 0.5rem;
     }
 
     .navbar {
