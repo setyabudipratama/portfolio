@@ -29,8 +29,8 @@ Di Indonesia, hak cipta dilindungi oleh Undang-Undang No. 28 tahun 2014. Undang-
 
 html,
 body {
-    position: relative;
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     background-color: #d0b2ff;
     font-family: Arial, sans-serif;
 }
@@ -1021,7 +1021,7 @@ p {
 
     header .text {
         padding: 5px 0;
-        margin: 0 20px;
+        margin: 0 15px;
     }
 
     header {
