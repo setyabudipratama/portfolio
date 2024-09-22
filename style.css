@@ -147,12 +147,14 @@ header .text {
     border-radius: 10px;
 }
 
-header .text h1 {
+header .text h2 {
+    font-size: 1.8rem;
     color: #ffffff;
     text-shadow: 0 0 10px cyan;
 }
 
 header .text p {
+    font-size: 1.2rem;
     color: #ffffff;
     text-shadow: 0 0 5px cyan;
 }
@@ -1019,11 +1021,6 @@ p {
         height: auto;
     }
 
-    header .text {
-        padding: 5px 0;
-        margin: 0 15px;
-    }
-
     header {
         position: relative;
         top: 0;
@@ -1032,12 +1029,18 @@ p {
         height: 20vh;
     }
 
-    header h1 {
-        font-size: 1.4rem;
+    header .text {
+        padding: 7px 0;
+        margin: 0 20px;
+        row-gap: 5px;
     }
 
-    header p {
-        font-size: 0.5rem;
+    header .text h2 {
+        font-size: 1.3rem;
+    }
+
+    header .text p {
+        font-size: 1rem;
     }
 
     .navbar {
@@ -1349,14 +1352,15 @@ p {
     header .text {
         padding: 10px 0;
         margin: 0 150px;
+        row-gap: 5px;
     }
 
-    header h1 {
+    header .text h2 {
         font-size: 1.5rem;
     }
 
-    header p {
-        font-size: 0.5rem;
+    header .text p {
+        font-size: 1.2rem;
     }
 
     .navbar {
