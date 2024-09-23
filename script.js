@@ -215,3 +215,37 @@ linkIn.removeAttribute('class');
 linkIn.setAttribute('class', 'fa-brands fa-linkedin');
 // ubah warna
 linkIn.style.color = 'skyblue';
+
+// Copyright (C) 2024 Setya Budi Pratama
+
+// All rights reserved.
+
+// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
+// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
+
+// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
+
+// ambil parent
+const kontak = document.querySelector('#contact form');
+// tambah id
+kontak.setAttribute('id', 'whatsapp');
+
+// aktifkan contact
+document.getElementById('whatsapp').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // ambil value
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // encode untuk mengirimkan pesan
+    const whatsappPesan = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+
+    const nmrWhatsapp = "6282264244554";
+
+    // url
+    const url = `https://wa.me/${nmrWhatsapp}?text=${whatsappPesan}`;
+    // open whatsapp
+    window.open(url);
+});
