@@ -129,7 +129,7 @@ liBaru.setAttribute('class', 'icon instagram');
 // buat tag span baru
 const spanBaru = document.createElement('span');
 // buat teks
-const teksSpanBaru = document.createTextNode('sy.setyabudi');
+const teksSpanBaru = document.createTextNode('classnamesetya');
 // masukkan span ke tag li
 liBaru.appendChild(spanBaru);
 // masukkan teks
@@ -146,7 +146,7 @@ liPertama.appendChild(aBaru);
 // tambah kelas link
 aBaru.setAttribute('class', 'link');
 // tambah link href
-aBaru.href = 'https://www.instagram.com/sy.setyabudi/';
+aBaru.href = 'https://www.instagram.com/classnamesetya/';
 
 // buat tag i baru
 const instagram = document.createElement('i');
