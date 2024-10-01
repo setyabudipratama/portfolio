@@ -249,3 +249,24 @@ document.getElementById('whatsapp').addEventListener('submit', function (e) {
     // open whatsapp
     window.open(url);
 });
+
+// Copyright (C) 2024 Setya Budi Pratama
+
+// All rights reserved.
+
+// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
+// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
+
+// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
+
+// project lain
+
+const ejen = document.querySelector('#projects .card:nth-child(8)');
+ejen.addEventListener('dblclick', function () {
+    window.location.href = 'https://setyabudipratama.github.io/ejen';
+});
+
+const furniture = document.querySelector('#projects .card:nth-child(11)');
+furniture.addEventListener('dblclick', function () {
+    window.location.href = 'https://setyabudipratama.github.io/furniture';
+});
