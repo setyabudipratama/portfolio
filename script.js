@@ -261,12 +261,13 @@ document.getElementById('whatsapp').addEventListener('submit', function (e) {
 
 // project lain
 
-const ejen = document.querySelector('#projects .card:nth-child(8)');
+// project lain
+const ejen = document.querySelector('#projects .card:first-child');
 ejen.addEventListener('dblclick', function () {
     window.location.href = 'https://setyabudipratama.github.io/ejen';
 });
 
-const furniture = document.querySelector('#projects .card:nth-child(11)');
+const furniture = document.querySelector('#projects .card:nth-child(2)');
 furniture.addEventListener('dblclick', function () {
     window.location.href = 'https://setyabudipratama.github.io/furniture';
 });
