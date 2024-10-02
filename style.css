@@ -595,6 +595,14 @@ header p {
     scale: 1.1;
 }
 
+/* class fa-thumbtack */
+#projects .card .fa-thumbtack {
+    position: relative;
+    top: 1%;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
 /* class desc */
 #projects .desc {
     position: relative;
