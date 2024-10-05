@@ -271,3 +271,8 @@ const furniture = document.querySelector('#projects .card:nth-child(2)');
 furniture.addEventListener('dblclick', function () {
     window.location.href = 'https://setyabudipratama.github.io/furniture';
 });
+
+const property = document.querySelector('#projects .card:nth-child(3)');
+property.addEventListener('dblclick', function () {
+    window.location.href = 'https://setyabudipratama.github.io/property';
+});
