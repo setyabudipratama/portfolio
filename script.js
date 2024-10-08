@@ -78,10 +78,21 @@ icons.forEach(icon => {
     icon.style.color = 'yellow';
 });
 
+// Copyright (C) 2024 Setya Budi Pratama
+
+// All rights reserved.
+
+// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
+// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
+
+// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
+
 //ambil element yang dibutuhkan pada waktu mode siang dan malam
 const h2 = document.querySelectorAll('section.py-5 h2');
 const label = document.querySelectorAll('section.py-5 label');
 const skillsh5 = document.querySelectorAll('#skills h5');
+const iconGithub = document.querySelector('#projects .github i');
+const textGithub = document.querySelector('#projects .card-body span');
 const lamp = document.querySelector('.fa-toggle-off');
 // fungsi addEventListener untuk mengubah mode siang dan malam
 lamp.addEventListener('click', function (event) {
@@ -113,6 +124,8 @@ lamp.addEventListener('click', function (event) {
     skillsh5.forEach(l => l.style.color = colors[isNightMode ? 'night' : 'day'].text);
     label.forEach(l => l.style.color = colors[isNightMode ? 'night' : 'day'].text);
     h2.forEach(h => h.style.color = colors[isNightMode ? 'night' : 'day'].text);
+    iconGithub.style.color = colors[isNightMode ? 'night' : 'day'].text;
+    textGithub.style.color = colors[isNightMode ? 'night' : 'day'].text;
 });
 
 // buat tag li baru
@@ -260,8 +273,6 @@ document.getElementById('whatsapp').addEventListener('submit', function (e) {
 // This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
 
 // project lain
-
-// project lain
 const ejen = document.querySelector('#projects .card:first-child');
 ejen.addEventListener('dblclick', function () {
     window.location.href = 'https://setyabudipratama.github.io/ejen';
@@ -275,4 +286,9 @@ furniture.addEventListener('dblclick', function () {
 const property = document.querySelector('#projects .card:nth-child(3)');
 property.addEventListener('dblclick', function () {
     window.location.href = 'https://setyabudipratama.github.io/property';
+});
+
+const projects = document.getElementById('github');
+projects.addEventListener('dblclick', function () {
+    window.location.href = 'https://github.com/setyabudipratama/project.git';
 });
