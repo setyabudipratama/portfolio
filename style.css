@@ -840,6 +840,7 @@ header p {
 /* tag h2 */
 #contact h2 {
     position: relative;
+    top: -20px;
     font-size: 1.7rem;
     font-family: 'Pacifico';
 }
@@ -850,6 +851,8 @@ header p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: -20px;
 }
 
 /* class form-group */
@@ -932,7 +935,8 @@ header p {
     font-size: 1rem;
     box-shadow: 0 0 5px #000000;
     transition: box-shadow 0.3s ease;
-    background: #3853ff;
+    background: blue;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
     color: #ffffff;
     font-weight: bold;
     border: none;
@@ -942,11 +946,10 @@ header p {
 }
 
 #contact .container .btn:hover {
-    filter: drop-shadow(0 0 10px #ffffff);
-    /* menambahkan efek bayangan */
+    filter: drop-shadow(0 0 10px #03e9f4);
     transform: scale(1.1);
     color: #383838;
-    background-color: #d0b2ff;
+    background-color: #03e9f4;
 }
 
 #contact .container .btn:active {
