@@ -93,6 +93,7 @@ const label = document.querySelectorAll('section.py-5 label');
 const skillsh5 = document.querySelectorAll('#skills h5');
 const iconGithub = document.querySelector('#projects .github i');
 const textGithub = document.querySelector('#projects .card-body span');
+const textCipta = document.querySelectorAll('footer .left p');
 const lamp = document.querySelector('.fa-toggle-off');
 // fungsi addEventListener untuk mengubah mode siang dan malam
 lamp.addEventListener('click', function (event) {
@@ -126,6 +127,7 @@ lamp.addEventListener('click', function (event) {
     h2.forEach(h => h.style.color = colors[isNightMode ? 'night' : 'day'].text);
     iconGithub.style.color = colors[isNightMode ? 'night' : 'day'].text;
     textGithub.style.color = colors[isNightMode ? 'night' : 'day'].text;
+    textCipta.forEach(t => t.style.color = colors[isNightMode ? 'night' : 'day'].text);
 });
 
 // buat tag li baru
