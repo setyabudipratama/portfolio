@@ -1263,21 +1263,21 @@ p {
         width: 100px;
         height: auto;
         border-radius: 50% 30% 30% 50% / 50% 30% 50% 30%;
-        top: -10%;
+        top: -8%;
         left: 0;
     }
 
     #about .profil h5 {
         width: 200px;
         font-size: 1rem;
-        top: -8%;
+        top: 0;
         left: 0;
     }
 
     #about .profil p {
         width: 250px;
         font-size: 0.8rem;
-        top: 0;
+        top: 5%;
         left: 0;
     }
 
@@ -1587,21 +1587,21 @@ p {
         width: 100px;
         height: auto;
         border-radius: 50% 30% 30% 50% / 50% 30% 50% 30%;
-        top: -10%;
+        top: -8%;
         left: 0;
     }
 
     #about .profil h5 {
         width: 200px;
         font-size: 1rem;
-        top: -8%;
+        top: 0;
         left: 0;
     }
 
     #about .profil p {
         width: 250px;
         font-size: 0.8rem;
-        top: 0;
+        top: 5%;
         left: 0;
     }
 
