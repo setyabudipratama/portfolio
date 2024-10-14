@@ -1394,7 +1394,7 @@ p {
     }
 
     footer .left {
-        width: 35%;
+        width: 45%;
     }
 
     footer .left img {
@@ -1407,15 +1407,13 @@ p {
     }
 
     footer .social {
-        width: 65%;
+        width: 50%;
         position: relative;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 5px;
-        margin-right: 6px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 5px;
     }
 
     footer .social .icon {
@@ -1424,7 +1422,7 @@ p {
     }
 
     footer .social .desc {
-        font-size: 0.5rem;
+        font-size: 0.8rem;
     }
 }
 
