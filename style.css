@@ -587,15 +587,14 @@ header p {
     transition: color 0.3s ease;
 }
 
-#projects .card:hover>.desc h5,
+/* #projects .card:hover>.desc h5,
 #projects .card:hover>.desc h5+p {
     opacity: 1;
     transform: translateX(0);
-}
+} */
 
-#projects .card:hover>.desc img {
-    filter: brightness(0.8);
-    scale: 1.1;
+#projects .card:hover>.image img {
+    scale: 1.2;
 }
 
 /* tag i */
@@ -606,8 +605,8 @@ header p {
     color: #ffffff;
 }
 
-/* class desc */
-#projects .desc {
+/* class image */
+#projects .image {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -618,7 +617,7 @@ header p {
 }
 
 /* tag h5 */
-#projects .desc h5 {
+/* #projects .desc h5 {
     position: absolute;
     top: 65px;
     font-size: 1.2rem;
@@ -626,10 +625,10 @@ header p {
     opacity: 0;
     transform: translateX(100%);
     transition: 0.5s ease;
-}
+} */
 
 /* tag p */
-#projects .desc p {
+/* #projects .desc p {
     position: absolute;
     top: 90px;
     font-size: 1.1rem;
@@ -637,10 +636,10 @@ header p {
     opacity: 0;
     transform: translateX(-100%);
     transition: 0.5s ease;
-}
+} */
 
 /* tag img */
-#projects .desc img {
+#projects .image img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -658,16 +657,6 @@ header p {
     justify-content: center;
     align-items: center;
     padding: 5px;
-}
-
-/* class image */
-#projects .image {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
 }
 
 /* class github */
