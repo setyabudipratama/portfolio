@@ -704,7 +704,8 @@ header p {
 
 /* tag span */
 #projects .github .card-body span {
-    margin-top: 20px;
+    position: relative;
+    top: 50%;
     font-size: 1.5rem;
     font-weight: bold;
     color: #00098D;
