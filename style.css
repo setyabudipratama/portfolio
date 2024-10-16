@@ -606,7 +606,7 @@ header p {
 }
 
 /* class image */
-#projects .image {
+#projects .card .image {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -639,7 +639,7 @@ header p {
 } */
 
 /* tag img */
-#projects .image img {
+#projects .card .image img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -651,7 +651,7 @@ header p {
 }
 
 /* class card-body */
-#projects .card-body {
+#projects .card .card-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -673,8 +673,17 @@ header p {
     align-items: center;
 }
 
+#projects .github .image {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
 /* class fa-github */
-#projects .image .fa-square-github {
+#projects .github .image .fa-square-github {
     font-size: 10rem;
     color: #00098D;
     position: relative;
@@ -694,7 +703,7 @@ header p {
 }
 
 /* tag span */
-#projects .card-body span {
+#projects .github .card-body span {
     margin-top: 20px;
     font-size: 1.5rem;
     font-weight: bold;
