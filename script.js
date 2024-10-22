@@ -294,3 +294,11 @@ const projects = document.getElementById('github');
 projects.addEventListener('dblclick', function () {
     window.location.href = 'https://github.com/setyabudipratama/project.git';
 });
+
+
+// update skill javascript
+const jsText = document.querySelector('#skills .icon:nth-child(3) h5:last-child');
+jsText.innerHTML = '70%';
+
+const jsValue = document.querySelector('#skills .icon:nth-child(3) #skills-progress-fill');
+jsValue.style.width = '70%';
