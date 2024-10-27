@@ -302,3 +302,46 @@ jsText.innerHTML = '70%';
 
 const jsValue = document.querySelector('#skills .icon:nth-child(3) #skills-progress-fill');
 jsValue.style.width = '70%';
+
+
+// box shadow
+const btnContact = document.querySelector('#contact .btn');
+btnContact.style.boxShadow = '0 0 10px blue, -0 -0 10px blue';
+btnContact.addEventListener('mouseenter', function () {
+    btnContact.style.boxShadow = '0 0 10px cyan, -0 -0 10px cyan';
+});
+
+btnContact.addEventListener('mouseleave', function () {
+    btnContact.style.boxShadow = '0 0 10px blue, -0 -0 10px blue';
+});
+
+
+// hover card project
+const cardProject = document.querySelectorAll('#projects .card');
+cardProject.forEach(card => {
+    card.style.cursor = 'pointer';
+    card.style.position = 'relative';
+    card.style.top =  '5%';
+    card.style.transition = 'all 0.5s';
+    card.addEventListener('mouseenter', function () {
+        card.style.transform = 'translateY(-1.5rem)';
+        const imgProject = card.querySelectorAll('.image img');
+        imgProject.forEach(img => {
+            img.style.scale = '1';
+        });
+    });
+    card.addEventListener('mouseleave', function () {
+        card.style.transform = 'translateY(0)';
+        card.style.borderRadius = '10px';
+    });
+});
+
+const slideProject = document.querySelector('#projects .slide');
+slideProject.style.height = '80vh';
+function applyResponsiveStyles() {
+    if (window.innerWidth < 767) {
+        Object.assign(slideProject.style, {
+            height: '60vh',
+        });
+    }
+}
