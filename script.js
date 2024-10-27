@@ -296,6 +296,13 @@ projects.addEventListener('dblclick', function () {
 });
 
 
+// efek bayangan about
+const aboutBox = document.querySelector('#about .box');
+Object.assign(aboutBox.style, {
+    webkitBoxReflect: 'right 5px linear-gradient(transparent, #0005)',
+});
+
+
 // update skill javascript
 const jsText = document.querySelector('#skills .icon:nth-child(3) h5:last-child');
 jsText.innerHTML = '70%';
@@ -303,6 +310,42 @@ jsText.innerHTML = '70%';
 const jsValue = document.querySelector('#skills .icon:nth-child(3) #skills-progress-fill');
 jsValue.style.width = '70%';
 
+// hover card project
+const cardProject = document.querySelectorAll('#projects .card');
+cardProject.forEach(card => {
+    Object.assign(card.style, {
+        cursor: 'pointer',
+        position: 'relative',
+        top: '5%',
+        transition: 'all 0.5s',
+    });
+});
+
+cardProject.forEach(card => {
+    card.addEventListener('mouseenter', function () {
+        card.style.transform = 'translateY(-1.5rem)';
+        const imgProject = card.querySelectorAll('.image img');
+        imgProject.forEach(img => {
+            img.style.scale = '1';
+        });
+    });
+    card.addEventListener('mouseleave', function () {
+        card.style.transform = 'translateY(0)';
+    });
+});
+
+const slideProject = document.querySelector('#projects .slide');
+Object.assign(slideProject.style, {
+    height: '80vh',
+});
+
+// efek bayangan skills
+const skillIcons = document.querySelectorAll('#skills .icon');
+skillIcons.forEach(icon => {
+    Object.assign(icon.style, {
+        webkitBoxReflect: 'below 5px linear-gradient(transparent, #0005)',
+    });
+});
 
 // box shadow
 const btnContact = document.querySelector('#contact .btn');
@@ -315,33 +358,25 @@ btnContact.addEventListener('mouseleave', function () {
     btnContact.style.boxShadow = '0 0 10px blue, -0 -0 10px blue';
 });
 
-
-// hover card project
-const cardProject = document.querySelectorAll('#projects .card');
-cardProject.forEach(card => {
-    card.style.cursor = 'pointer';
-    card.style.position = 'relative';
-    card.style.top =  '5%';
-    card.style.transition = 'all 0.5s';
-    card.addEventListener('mouseenter', function () {
-        card.style.transform = 'translateY(-1.5rem)';
-        const imgProject = card.querySelectorAll('.image img');
-        imgProject.forEach(img => {
-            img.style.scale = '1';
-        });
-    });
-    card.addEventListener('mouseleave', function () {
-        card.style.transform = 'translateY(0)';
-        card.style.borderRadius = '10px';
-    });
+btnContact.addEventListener('click', function () {
+    btnContact.style.boxShadow = '0 0 10px cyan, -0 -0 10px cyan';
 });
 
-const slideProject = document.querySelector('#projects .slide');
-slideProject.style.height = '80vh';
 function applyResponsiveStyles() {
     if (window.innerWidth < 767) {
+        Object.assign(aboutBox.style, {
+            webkitBoxReflect: 'below 1px linear-gradient(transparent, #0005)',
+        });
         Object.assign(slideProject.style, {
-            height: '60vh',
+            height: '50vh',
+        });
+        skillIcons.forEach(icon => {
+            Object.assign(icon.style, {
+                webkitBoxReflect: 'right 1px linear-gradient(transparent, #0005)',
+            });
         });
     }
 }
+
+// panggil fungsi
+window.onload = applyResponsiveStyles;
