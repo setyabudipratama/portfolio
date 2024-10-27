@@ -296,13 +296,6 @@ projects.addEventListener('dblclick', function () {
 });
 
 
-// efek bayangan about
-const aboutBox = document.querySelector('#about .box');
-Object.assign(aboutBox.style, {
-    webkitBoxReflect: 'right 5px linear-gradient(transparent, #0005)',
-});
-
-
 // update skill javascript
 const jsText = document.querySelector('#skills .icon:nth-child(3) h5:last-child');
 jsText.innerHTML = '70%';
@@ -364,9 +357,6 @@ btnContact.addEventListener('click', function () {
 
 function applyResponsiveStyles() {
     if (window.innerWidth < 767) {
-        Object.assign(aboutBox.style, {
-            webkitBoxReflect: 'below 1px linear-gradient(transparent, #0005)',
-        });
         Object.assign(slideProject.style, {
             height: '50vh',
         });
