@@ -71,12 +71,14 @@ window.addEventListener('scroll', function () {
     });
 });
 
-// mengambil selector i dari semua elemen
-const icons = document.querySelectorAll('section#skills i');
-// merubah warna semua icon halaman skills
-icons.forEach(icon => {
-    icon.style.color = 'yellow';
-});
+// ambil parent
+const iconHtml = document.querySelector('#skills .icon:first-child i');
+const iconCss = document.querySelector('#skills .icon:nth-child(2) i');
+const iconJavascript = document.querySelector('#skills .icon:nth-child(3) i');
+// merubah warna icon di halaman skills
+iconHtml.style.color = 'red';
+iconCss.style.color = 'blue';
+iconJavascript.style.color = 'yellow';
 
 // Copyright (C) 2024 Setya Budi Pratama
 
@@ -358,7 +360,7 @@ btnContact.addEventListener('click', function () {
 function applyResponsiveStyles() {
     if (window.innerWidth < 767) {
         Object.assign(slideProject.style, {
-            height: '50vh',
+            height: '60vh',
         });
         skillIcons.forEach(icon => {
             Object.assign(icon.style, {
