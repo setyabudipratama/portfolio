@@ -372,3 +372,77 @@ function applyResponsiveStyles() {
 
 // panggil fungsi
 window.onload = applyResponsiveStyles;
+
+// Copyright (C) 2024 Setya Budi Pratama
+
+// All rights reserved.
+
+// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
+// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
+
+// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
+
+// DOM
+const projectSlide = document.querySelector('#projects .slide');
+const githubIcon = document.getElementById('github');
+
+// buat card baru
+const cardBaru = document.createElement('div');
+cardBaru.setAttribute('class', 'card');
+// masukkan card baru
+projectSlide.insertBefore(cardBaru, githubIcon);
+cardBaru.style.position = 'relative';
+cardBaru.style.top = '5%';
+
+// buat tag i
+const iBaru = document.createElement('i');
+iBaru.setAttribute('class', 'fa-solid fa-4');
+// masukkan i
+cardBaru.appendChild(iBaru);
+
+// element class image
+const imageBaru = document.createElement('div');
+imageBaru.setAttribute('class', 'image');
+// masukkan image
+cardBaru.appendChild(imageBaru);
+
+// element img
+const imgBaru = document.createElement('img');
+imgBaru.setAttribute('src', 'gambar/website company.png');
+imgBaru.setAttribute('alt', 'image');
+// masukkan img
+imageBaru.appendChild(imgBaru);
+
+// element class card-body
+const cardBodyBaru = document.createElement('div');
+cardBodyBaru.setAttribute('class', 'card-body');
+// masukkan card-body
+cardBaru.appendChild(cardBodyBaru);
+
+// tag h5
+const h5Baru = document.createElement('h5');
+h5Baru.setAttribute('class', 'card-title');
+h5Baru.innerHTML = 'Website Company';
+// masukkan h5
+cardBodyBaru.appendChild(h5Baru);
+
+// tag p
+const pBaru = document.createElement('p');
+pBaru.classList.add('card-text');
+pBaru.innerText = `Membuat pemrograman UI website company menggunakan pemrograman html, css (bootstrap 5)
+            dan javascript. (double-click to see result)`;
+// masukkan p
+cardBodyBaru.appendChild(pBaru);
+
+cardBaru.addEventListener('mouseenter', function () {
+    cardBaru.style.transition = 'all 0.5s';
+    cardBaru.style.transform = 'translateY(-1.5rem)';
+    imgBaru.style.scale = '1';
+});
+cardBaru.addEventListener('mouseleave', function () {
+    cardBaru.style.transform = 'translateY(0)';
+});
+
+cardBaru.addEventListener('dblclick', function () {
+    window.location.href = 'https://setyabudipratama.github.io/company';
+});
