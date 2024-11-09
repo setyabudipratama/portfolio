@@ -298,12 +298,21 @@ projects.addEventListener('dblclick', function () {
 });
 
 
-// update skill javascript
+// update skill html, css dan javascript
+const htmlText = document.querySelector('#skills .icon:first-child h5:last-child');
+const cssText = document.querySelector('#skills .icon:nth-child(2) h5:last-child');
 const jsText = document.querySelector('#skills .icon:nth-child(3) h5:last-child');
-jsText.innerHTML = '70%';
+htmlText.innerHTML = '95%';
+cssText.innerHTML = '95%';
+jsText.innerHTML = '75%';
 
+const htmlValue = document.querySelector('#skills .icon:first-child #skills-progress-fill');
+const cssValue = document.querySelector('#skills .icon:nth-child(2) #skills-progress-fill');
 const jsValue = document.querySelector('#skills .icon:nth-child(3) #skills-progress-fill');
-jsValue.style.width = '70%';
+htmlValue.style.width = '95%';
+cssValue.style.width = '95%';
+jsValue.style.width = '75%';
+
 
 // hover card project
 const cardProject = document.querySelectorAll('#projects .card');
