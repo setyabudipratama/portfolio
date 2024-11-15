@@ -398,7 +398,7 @@ btnContact.addEventListener('click', function () {
 
 function applyResponsiveStyles() {
     if (window.innerWidth < 767) {
-        pAboutUs.style.width = '230px';
+        pAboutUs.style.width = '210px';
         Object.assign(slideProject.style, {
             height: '60vh',
         });
