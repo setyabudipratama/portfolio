@@ -298,6 +298,7 @@ projects.addEventListener('dblclick', function () {
 });
 
 
+// DOM
 // update skill html, css dan javascript
 const htmlText = document.querySelector('#skills .icon:first-child h5:last-child');
 const cssText = document.querySelector('#skills .icon:nth-child(2) h5:last-child');
@@ -313,6 +314,30 @@ htmlValue.style.width = '95%';
 cssValue.style.width = '95%';
 jsValue.style.width = '75%';
 
+// border radius class box
+const boxAboutUs = document.querySelector('#about .box');
+const profilAboutUs = document.querySelector('#about .box .profil');
+boxAboutUs.style.animation = 'morph 4s linear infinite';
+profilAboutUs.style.animation = 'morph 4s linear infinite';
+profilAboutUs.style.backgroundImage = 'linear-gradient(145deg, darkblue 0%, blue 50%, lightblue 100%)';
+const style = document.createElement('style');
+style.innerHTML = `
+    @keyframes morph {
+        0%, 100% {
+            border-radius: 50%;
+        }
+        25% {
+            border-radius: 30% 70% 70% 30% / 30% 70% 30% 70%;
+        }
+        50% {
+            border-radius: 70% 30% 30% 70% / 70% 30% 70% 30%;
+        }
+        75% {
+            border-radius: 50% 50% 30% 50%;
+        }
+    }
+`;
+document.head.appendChild(style);
 
 // hover card project
 const cardProject = document.querySelectorAll('#projects .card');
