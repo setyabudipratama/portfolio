@@ -132,6 +132,8 @@ lamp.addEventListener('click', function (event) {
     textCipta.forEach(t => t.style.color = colors[isNightMode ? 'night' : 'day'].text);
 });
 
+
+// DOM
 // buat tag li baru
 const liBaru = document.createElement('li');
 // ambil parent
@@ -339,6 +341,9 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
+// rubah ukuran width
+const pAboutUs = document.querySelector('#about .box p');
+
 // hover card project
 const cardProject = document.querySelectorAll('#projects .card');
 cardProject.forEach(card => {
@@ -393,6 +398,7 @@ btnContact.addEventListener('click', function () {
 
 function applyResponsiveStyles() {
     if (window.innerWidth < 767) {
+        pAboutUs.style.width = '230px';
         Object.assign(slideProject.style, {
             height: '60vh',
         });
