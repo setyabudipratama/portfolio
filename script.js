@@ -422,7 +422,9 @@ window.onload = applyResponsiveStyles;
 
 // This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
 
+
 // DOM
+// card baru
 const projectSlide = document.querySelector('#projects .slide');
 const githubIcon = document.getElementById('github');
 
@@ -486,3 +488,27 @@ cardBaru.addEventListener('mouseleave', function () {
 cardBaru.addEventListener('dblclick', function () {
     window.location.href = 'https://setyabudipratama.github.io/company';
 });
+
+
+// DOM
+// animation header
+const textHeader = document.querySelector('header .text');
+const h2Header = document.querySelector('header .text h2');
+const pHeader = document.querySelector('header .text p');
+Object.assign(textHeader.style, {
+    background: 'none',
+    backdropFilter: 'none',
+})
+h2Header.style.animation = 'shake 2s ease-in-out infinite';
+pHeader.style.animation = 'shake 2s ease-in-out infinite';
+const style2 = document.createElement('style');
+style2.innerHTML = `
+    @keyframes shake {
+    0%, 100% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}`;
+document.head.appendChild(style2);
