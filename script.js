@@ -413,6 +413,7 @@ function applyResponsiveStyles() {
 // panggil fungsi
 window.onload = applyResponsiveStyles;
 
+
 // Copyright (C) 2024 Setya Budi Pratama
 
 // All rights reserved.
@@ -421,7 +422,6 @@ window.onload = applyResponsiveStyles;
 // You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
 
 // This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
-
 
 // DOM
 // card baru
@@ -489,6 +489,77 @@ cardBaru.addEventListener('dblclick', function () {
     window.location.href = 'https://setyabudipratama.github.io/company';
 });
 
+
+// buat card baru 2
+const cardBaru2 = document.createElement('div');
+cardBaru2.setAttribute('class', 'card');
+// masukkan card baru
+projectSlide.insertBefore(cardBaru2, githubIcon);
+cardBaru2.style.position = 'relative';
+cardBaru2.style.top = '5%';
+
+// buat tag i
+const iBaru2 = document.createElement('i');
+iBaru2.setAttribute('class', 'fa-solid fa-5');
+// masukkan i
+cardBaru2.appendChild(iBaru2);
+
+// element class image
+const imageBaru2 = document.createElement('div');
+imageBaru2.setAttribute('class', 'image');
+// masukkan image
+cardBaru2.appendChild(imageBaru2);
+
+// tag img
+const imgBaru2 = document.createElement('img');
+imgBaru2.setAttribute('src', 'gambar/website wisata.png');
+imgBaru2.setAttribute('alt', 'image');
+// masukkan img
+imageBaru2.appendChild(imgBaru2);
+
+// element class card-body
+const cardBodyBaru2 = document.createElement('div');
+cardBodyBaru2.setAttribute('class', 'card-body');
+// masukkan card-body
+cardBaru2.appendChild(cardBodyBaru2);
+
+// tag h5
+const h5Baru2 = document.createElement('h5');
+h5Baru2.setAttribute('class', 'card-title');
+h5Baru2.innerHTML = 'Website Wisata';
+// masukkan h5
+cardBodyBaru2.appendChild(h5Baru2);
+
+// tag p
+const pBaru2 = document.createElement('p');
+pBaru2.classList.add('card-text');
+pBaru2.innerText = `Membuat pemrograman UI website wisata menggunakan pemrograman html, css (bootstrap 5)
+            dan javascript. (double-click to see result)`;
+// masukkan p
+cardBodyBaru2.appendChild(pBaru2);
+
+cardBaru2.addEventListener('mouseenter', function () {
+    cardBaru2.style.transition = 'all 0.5s';
+    cardBaru2.style.transform = 'translateY(-1.5rem)';
+    imgBaru2.style.scale = '1';
+});
+cardBaru2.addEventListener('mouseleave', function () {
+    cardBaru2.style.transform = 'translateY(0)';
+});
+
+cardBaru2.addEventListener('dblclick', function () {
+    window.location.href = 'https://setyabudipratama.github.io/wisata';
+});
+
+
+// Copyright (C) 2024 Setya Budi Pratama
+
+// All rights reserved.
+
+// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
+// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
+
+// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
 
 // DOM
 // animation header
