@@ -490,6 +490,7 @@ cardBaru.addEventListener('dblclick', function () {
 });
 
 
+// DOM
 // buat card baru 2
 const cardBaru2 = document.createElement('div');
 cardBaru2.setAttribute('class', 'card');
@@ -550,6 +551,7 @@ cardBaru2.addEventListener('mouseleave', function () {
 cardBaru2.addEventListener('dblclick', function () {
     window.location.href = 'https://setyabudipratama.github.io/wisata';
 });
+
 
 
 // Copyright (C) 2024 Setya Budi Pratama
