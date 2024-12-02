@@ -553,6 +553,157 @@ cardBaru2.addEventListener('dblclick', function () {
 });
 
 
+// Copyright (C) 2024 Setya Budi Pratama
+
+// All rights reserved.
+
+// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
+// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
+
+// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
+
+// DOM
+// akyif hanya untuk website dengan perubahan baru
+// // project 1
+// const cardProject1 = document.querySelector('#projects .card');
+// Object.assign(cardProject1.style, {
+//     border: '5px solid',
+//     animation: 'animateSpin 4s linear infinite'
+// });
+// const style1 = document.createElement('style');
+// style1.innerHTML = `
+//     @keyframes animateSpin {
+//     0% {
+//         border-color: yellow;
+//         /* warna border berubah */
+//     }
+//     30% {
+//         border-color: lightblue;
+//     }
+//     57% {
+//         border-color: blue;
+//     }
+//     77% {
+//         border-color: purple;
+//     }
+//     100% {
+//         border-color: yellow;
+//     }
+// }`;
+// document.head.appendChild(style);
+
+// // project 2
+// const cardProject2 = document.querySelector('#projects .card:nth-child(2)');
+// Object.assign(cardProject2.style, {
+//     border: '5px solid',
+//     animation: 'animateSpin 4s linear infinite'
+// });
+// const style2 = document.createElement('style');
+// style2.innerHTML = `
+//     @keyframes animateSpin {
+//     0% {
+//         border-color: yellow;
+//         /* warna border berubah */
+//     }
+//     30% {
+//         border-color: lightblue;
+//     }
+//     57% {
+//         border-color: blue;
+//     }
+//     77% {
+//         border-color: purple;
+//     }
+//     100% {
+//         border-color: yellow;
+//     }
+// }`;
+// document.head.appendChild(style);
+
+// // project 3
+// const cardProject3 = document.querySelector('#projects .card:nth-child(3)');
+// Object.assign(cardProject3.style, {
+//     border: '5px solid',
+//     animation: 'animateSpin 4s linear infinite'
+// });
+// const style3 = document.createElement('style');
+// style3.innerHTML = `
+//     @keyframes animateSpin {
+//     0% {
+//         border-color: yellow;
+//         /* warna border berubah */
+//     }
+//     30% {
+//         border-color: lightblue;
+//     }
+//     57% {
+//         border-color: blue;
+//     }
+//     77% {
+//         border-color: purple;
+//     }
+//     100% {
+//         border-color: yellow;
+//     }
+// }`;
+// document.head.appendChild(style);
+
+// // project 4
+// const cardProject4 = document.querySelector('#projects .card:nth-child(4)');
+// Object.assign(cardProject4.style, {
+//     border: '5px solid',
+//     animation: 'animateSpin 4s linear infinite'
+// });
+// const style4 = document.createElement('style');
+// style4.innerHTML = `
+//     @keyframes animateSpin {
+//     0% {
+//         border-color: yellow;
+//         /* warna border berubah */
+//     }
+//     30% {
+//         border-color: lightblue;
+//     }
+//     57% {
+//         border-color: blue;
+//     }
+//     77% {
+//         border-color: purple;
+//     }
+//     100% {
+//         border-color: yellow;
+//     }
+// }`;
+// document.head.appendChild(style);
+
+// project 5
+const cardProject5 = document.querySelector('#projects .card:nth-child(5)');
+Object.assign(cardProject5.style, {
+    border: '5px solid',
+    animation: 'animateSpin 4s linear infinite'
+})
+const style5 = document.createElement('style');
+style5.innerHTML = `
+    @keyframes animateSpin {
+    0% {
+        border-color: yellow;
+        /* warna border berubah */
+    }
+    30% {
+        border-color: lightblue;
+    }
+    57% {
+        border-color: blue;
+    }
+    77% {
+        border-color: purple;
+    }
+    100% {
+        border-color: yellow;
+    }
+}`;
+document.head.appendChild(style);
+
 
 // Copyright (C) 2024 Setya Budi Pratama
 
@@ -574,8 +725,8 @@ Object.assign(textHeader.style, {
 })
 h2Header.style.animation = 'shake 2s ease-in-out infinite';
 pHeader.style.animation = 'shake 2s ease-in-out infinite';
-const style2 = document.createElement('style');
-style2.innerHTML = `
+const styleHeader = document.createElement('style');
+styleHeader.innerHTML = `
     @keyframes shake {
     0%, 100% {
         transform: translateY(-5px);
