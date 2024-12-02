@@ -753,3 +753,6 @@ const cardTextProjects = document.querySelectorAll('#projects .card-text');
 for (let i = 0; i < cardTextProjects.length; i++) {
     cardTextProjects[i].innerHTML = '(double-click to see result)';
 };
+
+const cardTextGithub = document.querySelector('#github .card-text');
+cardTextGithub.innerHTML = 'See More';
