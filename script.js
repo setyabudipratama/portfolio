@@ -563,7 +563,7 @@ cardBaru2.addEventListener('dblclick', function () {
 // This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
 
 // DOM
-// akyif hanya untuk website dengan perubahan baru
+// aktif hanya untuk website dengan perubahan baru
 // // project 1
 // const cardProject1 = document.querySelector('#projects .card');
 // Object.assign(cardProject1.style, {
@@ -676,33 +676,33 @@ cardBaru2.addEventListener('dblclick', function () {
 // }`;
 // document.head.appendChild(style);
 
-// project 5
-const cardProject5 = document.querySelector('#projects .card:nth-child(5)');
-Object.assign(cardProject5.style, {
-    border: '5px solid',
-    animation: 'animateSpin 4s linear infinite'
-})
-const style5 = document.createElement('style');
-style5.innerHTML = `
-    @keyframes animateSpin {
-    0% {
-        border-color: yellow;
-        /* warna border berubah */
-    }
-    30% {
-        border-color: lightblue;
-    }
-    57% {
-        border-color: blue;
-    }
-    77% {
-        border-color: purple;
-    }
-    100% {
-        border-color: yellow;
-    }
-}`;
-document.head.appendChild(style);
+// // project 5
+// const cardProject5 = document.querySelector('#projects .card:nth-child(5)');
+// Object.assign(cardProject5.style, {
+//     border: '5px solid',
+//     animation: 'animateSpin 4s linear infinite'
+// });
+// const style5 = document.createElement('style');
+// style5.innerHTML = `
+//     @keyframes animateSpin {
+//     0% {
+//         border-color: yellow;
+//         /* warna border berubah */
+//     }
+//     30% {
+//         border-color: lightblue;
+//     }
+//     57% {
+//         border-color: blue;
+//     }
+//     77% {
+//         border-color: purple;
+//     }
+//     100% {
+//         border-color: yellow;
+//     }
+// }`;
+// document.head.appendChild(style);
 
 
 // Copyright (C) 2024 Setya Budi Pratama
