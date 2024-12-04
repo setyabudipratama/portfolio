@@ -755,24 +755,24 @@ function applyResponsiveStyles() {
             });
         });
         Object.assign(cardProjectHover1.style, {
-            width: '250px',
-            height: '110px',
+            width: '260px',
+            height: '120px',
         });
         Object.assign(cardProjectHover2.style, {
-            width: '250px',
-            height: '110px',
+            width: '260px',
+            height: '120px',
         });
         Object.assign(cardProjectHover3.style, {
-            width: '250px',
-            height: '110px',
+            width: '260px',
+            height: '120px',
         });
         Object.assign(cardBaru.style, {
-            width: '250px',
-            height: '110px',
+            width: '260px',
+            height: '120px',
         });
         Object.assign(cardBaru2.style, {
-            width: '250px',
-            height: '110px',
+            width: '260px',
+            height: '120px',
         });
         Object.assign(iGithub.style, {
             fontSize: '7rem',
@@ -936,8 +936,8 @@ cardBaru.addEventListener('mouseenter', function () {
     });
     Object.assign(imgBaru.style, {
         borderRadius: '5px 5px 0 0',
+        scale: '1'
     });
-    imgBaru.style.scale = '1';
 });
 cardBaru.addEventListener('mouseleave', function () {
     Object.assign(cardBaru.style, {
@@ -951,7 +951,7 @@ cardBaru.addEventListener('mouseleave', function () {
         borderRadius: '5px',
         boxShadow: '5px 5px 10px black'
     });
-    Object.assign(imageBaru.style, {
+    Object.assign(imgBaru.style, {
         borderRadius: '5px',
     });
 });
@@ -1083,8 +1083,8 @@ cardBaru2.addEventListener('mouseenter', function () {
     });
     Object.assign(imgBaru2.style, {
         borderRadius: '5px 5px 0 0',
+        scale: '1'
     });
-    imgBaru2.style.scale = '1';
 });
 cardBaru2.addEventListener('mouseleave', function () {
     Object.assign(cardBaru2.style, {
