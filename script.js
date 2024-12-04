@@ -724,6 +724,7 @@ cardProjectHover3.addEventListener('mouseleave', function () {
     });
 });
 
+const github = document.querySelector('#projects .github');
 const iGithub = document.querySelector('#projects .image .fa-square-github');
 const spanGithub = document.querySelector('#projects .github .card-body span');
 
@@ -776,12 +777,16 @@ function applyResponsiveStyles() {
         Object.assign(iGithub.style, {
             fontSize: '7rem',
             position: 'relative',
-            top: '50%'
+            top: '55%'
         });
         Object.assign(spanGithub.style, {
             position: 'relative',
-            top: '20%',
+            top: '40%',
             fontSize: '1.2rem'
+        });
+        Object.assign(github.style, {
+            width: '200px',
+            height: '240px'
         });
     }
 }
