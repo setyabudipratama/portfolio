@@ -395,8 +395,8 @@ Object.assign(cardBodyProjectHover1.style, {
 const h5ProjectHover1 = document.querySelector('#projects .card h5');
 Object.assign(h5ProjectHover1.style, {
     position: 'relative',
-    top: '25%',
-    color: '#ffffff',
+    top: '27%',
+    color: '#ffffff'
 });
 
 const pProjectHover1 = document.querySelector('#projects .card p');
@@ -522,8 +522,8 @@ Object.assign(cardBodyProjectHover2.style, {
 const h5ProjectHover2 = document.querySelector('#projects .card:nth-child(2) h5');
 Object.assign(h5ProjectHover2.style, {
     position: 'relative',
-    top: '25%',
-    color: '#ffffff',
+    top: '27%',
+    color: '#ffffff'
 });
 
 const pProjectHover2 = document.querySelector('#projects .card:nth-child(2) p');
@@ -649,8 +649,8 @@ Object.assign(cardBodyProjectHover3.style, {
 const h5ProjectHover3 = document.querySelector('#projects .card:nth-child(3) h5');
 Object.assign(h5ProjectHover3.style, {
     position: 'relative',
-    top: '25%',
-    color: '#ffffff',
+    top: '27%',
+    color: '#ffffff'
 });
 
 const pProjectHover3 = document.querySelector('#projects .card:nth-child(3) p');
@@ -880,8 +880,8 @@ h5Baru.innerHTML = 'Website Company';
 cardBodyBaru.appendChild(h5Baru);
 Object.assign(h5Baru.style, {
     position: 'relative',
-    top: '25%',
-    color: '#ffffff',
+    top: '27%',
+    color: '#ffffff'
 });
 
 // tag button
@@ -1027,8 +1027,8 @@ h5Baru2.innerHTML = 'Website Wisata';
 cardBodyBaru2.appendChild(h5Baru2);
 Object.assign(h5Baru2.style, {
     position: 'relative',
-    top: '25%',
-    color: '#ffffff',
+    top: '27%',
+    color: '#ffffff'
 });
 
 // tag button
