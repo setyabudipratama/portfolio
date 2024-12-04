@@ -278,25 +278,9 @@ document.getElementById('whatsapp').addEventListener('submit', function (e) {
 
 // This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
 
-// project lain
-const ejen = document.querySelector('#projects .card:first-child');
-ejen.addEventListener('dblclick', function () {
-    window.location.href = 'https://setyabudipratama.github.io/ejen';
-});
-
-const furniture = document.querySelector('#projects .card:nth-child(2)');
-furniture.addEventListener('dblclick', function () {
-    window.location.href = 'https://setyabudipratama.github.io/furniture';
-});
-
-const property = document.querySelector('#projects .card:nth-child(3)');
-property.addEventListener('dblclick', function () {
-    window.location.href = 'https://setyabudipratama.github.io/property';
-});
-
 const projects = document.getElementById('github');
-projects.addEventListener('dblclick', function () {
-    window.location.href = 'https://github.com/setyabudipratama/project.git';
+projects.addEventListener('click', function () {
+    window.location.href = 'https://github.com/setyabudipratama/component.git';
 });
 
 
@@ -344,30 +328,6 @@ document.head.appendChild(style);
 // rubah ukuran width
 const pAboutUs = document.querySelector('#about .box p');
 
-// hover card project
-const cardProject = document.querySelectorAll('#projects .card');
-cardProject.forEach(card => {
-    Object.assign(card.style, {
-        cursor: 'pointer',
-        position: 'relative',
-        top: '5%',
-        transition: 'all 0.5s',
-    });
-});
-
-cardProject.forEach(card => {
-    card.addEventListener('mouseenter', function () {
-        card.style.transform = 'translateY(-1.5rem)';
-        const imgProject = card.querySelectorAll('.image img');
-        imgProject.forEach(img => {
-            img.style.scale = '1';
-        });
-    });
-    card.addEventListener('mouseleave', function () {
-        card.style.transform = 'translateY(0)';
-    });
-});
-
 const slideProject = document.querySelector('#projects .slide');
 Object.assign(slideProject.style, {
     height: '80vh',
@@ -380,6 +340,392 @@ skillIcons.forEach(icon => {
         webkitBoxReflect: 'below 5px linear-gradient(transparent, #0005)',
     });
 });
+
+// DOM
+// ganti hover card project
+// project 1
+const cardProjectHover1 = document.querySelector('#projects .card');
+Object.assign(cardProjectHover1.style, {
+    position: 'relative',
+    top: '20%',
+    width: '310px',
+    height: '140px',
+    cursor: 'default',
+    transition: 'all 0.5s',
+    boxShadow: 'none',
+    border: 'none'
+});
+
+const iCardHover1 = document.querySelector('#projects .card i');
+iCardHover1.remove();
+
+const imageCardHover1 = document.querySelector('#projects .card .image');
+Object.assign(imageCardHover1.style, {
+    position: 'relative',
+    top: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '1',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+    boxShadow: '5px 5px 10px black'
+});
+
+const imgProjectHover1 = document.querySelector('#projects .card .image img');
+Object.assign(imgProjectHover1.style, {
+    width: '100%',
+    height: '100%',
+    margin: '0',
+    objectFit: 'cover',
+    borderRadius: '5px'
+});
+
+const cardBodyProjectHover1 = document.querySelector('#projects .card .card-body');
+Object.assign(cardBodyProjectHover1.style, {
+    position: 'absolute',
+    bottom: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '0',
+    backgroundColor: '#696ca7',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+});
+
+const h5ProjectHover1 = document.querySelector('#projects .card h5');
+Object.assign(h5ProjectHover1.style, {
+    position: 'relative',
+    top: '25%',
+    color: '#ffffff',
+});
+
+const pProjectHover1 = document.querySelector('#projects .card p');
+pProjectHover1.remove();
+
+const buttonCard1 = document.createElement('button');
+buttonCard1.appendChild(document.createTextNode('See Result'));
+h5ProjectHover1.after(buttonCard1);
+Object.assign(buttonCard1.style, {
+    position: 'relative',
+    top: '20%',
+    color: '#696ca7',
+    width: '100px',
+    height: '30px',
+    backgroundColor: '#ffffff',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    border: 'none',
+    outline: 'none',
+    transition: 'all 0.3s ease',
+});
+buttonCard1.addEventListener('click', function () {
+    window.location.href = 'https://setyabudipratama.github.io/ejen';
+});
+buttonCard1.addEventListener('mouseenter', function () {
+    Object.assign(buttonCard1.style, {
+        backgroundColor: 'transparent',
+        color: '#ffffff'
+    });
+});
+buttonCard1.addEventListener('mouseleave', function () {
+    Object.assign(buttonCard1.style, {
+        backgroundColor: '#ffffff',
+        color: '#696ca7'
+    });
+});
+
+cardProjectHover1.addEventListener('mouseenter', function () {
+    Object.assign(cardProjectHover1.style, {
+        transform: 'translateY(-1.5rem)'
+    });
+    Object.assign(cardBodyProjectHover1.style, {
+        transform: 'translateY(70px)',
+    });
+    Object.assign(imageCardHover1.style, {
+        borderRadius: '5px 5px 0 0',
+        boxShadow: 'none'
+    });
+    Object.assign(imgProjectHover1.style, {
+        borderRadius: '5px 5px 0 0',
+        scale: '1'
+    });
+});
+cardProjectHover1.addEventListener('mouseleave', function () {
+    Object.assign(cardProjectHover1.style, {
+        transform: 'translateY(0)'
+    });
+    Object.assign(cardBodyProjectHover1.style, {
+        borderRadius: '5px',
+        transform: 'translate(0)',
+    });
+    Object.assign(imageCardHover1.style, {
+        borderRadius: '5px',
+        boxShadow: '5px 5px 10px black'
+    });
+    Object.assign(imgProjectHover1.style, {
+        borderRadius: '5px',
+    });
+});
+
+
+// project 2
+const cardProjectHover2 = document.querySelector('#projects .card:nth-child(2)');
+Object.assign(cardProjectHover2.style, {
+    position: 'relative',
+    top: '20%',
+    width: '310px',
+    height: '140px',
+    cursor: 'default',
+    transition: 'all 0.5s',
+    boxShadow: 'none',
+    border: 'none'
+});
+
+const iCardHover2 = document.querySelector('#projects .card:nth-child(2) i');
+iCardHover2.remove();
+
+const imageCardHover2 = document.querySelector('#projects .card:nth-child(2) .image');
+Object.assign(imageCardHover2.style, {
+    position: 'relative',
+    top: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '1',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+    boxShadow: '5px 5px 10px black'
+});
+
+const imgProjectHover2 = document.querySelector('#projects .card:nth-child(2) .image img');
+Object.assign(imgProjectHover2.style, {
+    width: '100%',
+    height: '100%',
+    margin: '0',
+    objectFit: 'cover',
+});
+
+const cardBodyProjectHover2 = document.querySelector('#projects .card:nth-child(2) .card-body');
+Object.assign(cardBodyProjectHover2.style, {
+    position: 'absolute',
+    bottom: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '0',
+    backgroundColor: '#696ca7',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+});
+
+const h5ProjectHover2 = document.querySelector('#projects .card:nth-child(2) h5');
+Object.assign(h5ProjectHover2.style, {
+    position: 'relative',
+    top: '25%',
+    color: '#ffffff',
+});
+
+const pProjectHover2 = document.querySelector('#projects .card:nth-child(2) p');
+pProjectHover2.remove();
+
+const buttonCard2 = document.createElement('button');
+buttonCard2.appendChild(document.createTextNode('See Result'));
+h5ProjectHover2.after(buttonCard2);
+Object.assign(buttonCard2.style, {
+    position: 'relative',
+    top: '20%',
+    color: '#696ca7',
+    width: '100px',
+    height: '30px',
+    backgroundColor: '#ffffff',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    border: 'none',
+    outline: 'none',
+    transition: 'all 0.3s ease',
+});
+buttonCard2.addEventListener('click', function () {
+    window.location.href = 'https://setyabudipratama.github.io/furniture';
+});
+buttonCard2.addEventListener('mouseenter', function () {
+    Object.assign(buttonCard2.style, {
+        backgroundColor: 'transparent',
+        color: '#ffffff'
+    });
+});
+buttonCard2.addEventListener('mouseleave', function () {
+    Object.assign(buttonCard2.style, {
+        backgroundColor: '#ffffff',
+        color: '#696ca7'
+    });
+});
+
+cardProjectHover2.addEventListener('mouseenter', function () {
+    Object.assign(cardProjectHover2.style, {
+        transform: 'translateY(-1.5rem)'
+    });
+    Object.assign(cardBodyProjectHover2.style, {
+        transform: 'translateY(70px)',
+    });
+    Object.assign(imageCardHover2.style, {
+        borderRadius: '5px 5px 0 0',
+        boxShadow: 'none'
+    });
+    Object.assign(imgProjectHover2.style, {
+        borderRadius: '5px 5px 0 0',
+        scale: '1'
+    });
+});
+cardProjectHover2.addEventListener('mouseleave', function () {
+    Object.assign(cardProjectHover2.style, {
+        transform: 'translateY(0)'
+    });
+    Object.assign(cardBodyProjectHover2.style, {
+        borderRadius: '5px',
+        transform: 'translate(0)',
+    });
+    Object.assign(imageCardHover2.style, {
+        borderRadius: '5px',
+        boxShadow: '5px 5px 10px black'
+    });
+    Object.assign(imgProjectHover2.style, {
+        borderRadius: '5px',
+    });
+});
+
+
+// project 3
+const cardProjectHover3 = document.querySelector('#projects .card:nth-child(3)');
+Object.assign(cardProjectHover3.style, {
+    position: 'relative',
+    top: '20%',
+    width: '310px',
+    height: '140px',
+    cursor: 'default',
+    transition: 'all 0.5s',
+    boxShadow: 'none',
+    border: 'none'
+});
+
+const iCardHover3 = document.querySelector('#projects .card:nth-child(3) i');
+iCardHover3.remove();
+
+const imageCardHover3 = document.querySelector('#projects .card:nth-child(3) .image');
+Object.assign(imageCardHover3.style, {
+    position: 'relative',
+    top: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '1',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+    boxShadow: '5px 5px 10px black'
+});
+
+const imgProjectHover3 = document.querySelector('#projects .card:nth-child(3) .image img');
+Object.assign(imgProjectHover3.style, {
+    width: '100%',
+    height: '100%',
+    margin: '0',
+    objectFit: 'cover',
+});
+
+const cardBodyProjectHover3 = document.querySelector('#projects .card:nth-child(3) .card-body');
+Object.assign(cardBodyProjectHover3.style, {
+    position: 'absolute',
+    bottom: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '0',
+    backgroundColor: '#696ca7',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+});
+
+const h5ProjectHover3 = document.querySelector('#projects .card:nth-child(3) h5');
+Object.assign(h5ProjectHover3.style, {
+    position: 'relative',
+    top: '25%',
+    color: '#ffffff',
+});
+
+const pProjectHover3 = document.querySelector('#projects .card:nth-child(3) p');
+pProjectHover3.remove();
+
+const buttonCard3 = document.createElement('button');
+buttonCard3.appendChild(document.createTextNode('See Result'));
+h5ProjectHover3.after(buttonCard3);
+Object.assign(buttonCard3.style, {
+    position: 'relative',
+    top: '20%',
+    color: '#696ca7',
+    width: '100px',
+    height: '30px',
+    backgroundColor: '#ffffff',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    border: 'none',
+    outline: 'none',
+    transition: 'all 0.3s ease',
+});
+buttonCard3.addEventListener('click', function () {
+    window.location.href = 'https://setyabudipratama.github.io/property';
+});
+buttonCard3.addEventListener('mouseenter', function () {
+    Object.assign(buttonCard3.style, {
+        backgroundColor: 'transparent',
+        color: '#ffffff'
+    });
+});
+buttonCard3.addEventListener('mouseleave', function () {
+    Object.assign(buttonCard3.style, {
+        backgroundColor: '#ffffff',
+        color: '#696ca7'
+    });
+});
+
+cardProjectHover3.addEventListener('mouseenter', function () {
+    Object.assign(cardProjectHover3.style, {
+        transform: 'translateY(-1.5rem)'
+    });
+    Object.assign(cardBodyProjectHover3.style, {
+        transform: 'translateY(70px)',
+    });
+    Object.assign(imageCardHover3.style, {
+        borderRadius: '5px 5px 0 0',
+        boxShadow: 'none'
+    });
+    Object.assign(imgProjectHover3.style, {
+        borderRadius: '5px 5px 0 0',
+        scale: '1'
+    });
+});
+cardProjectHover3.addEventListener('mouseleave', function () {
+    Object.assign(cardProjectHover3.style, {
+        transform: 'translateY(0)'
+    });
+    Object.assign(cardBodyProjectHover3.style, {
+        borderRadius: '5px',
+        transform: 'translate(0)',
+    });
+    Object.assign(imageCardHover3.style, {
+        borderRadius: '5px',
+        boxShadow: '5px 5px 10px black'
+    });
+    Object.assign(imgProjectHover3.style, {
+        borderRadius: '5px',
+    });
+});
+
+const iGithub = document.querySelector('#projects .image .fa-square-github');
+const spanGithub = document.querySelector('#projects .github .card-body span');
 
 // box shadow
 const btnContact = document.querySelector('#contact .btn');
@@ -400,12 +746,42 @@ function applyResponsiveStyles() {
     if (window.innerWidth < 767) {
         pAboutUs.style.width = '210px';
         Object.assign(slideProject.style, {
-            height: '60vh',
+            height: '40vh',
         });
         skillIcons.forEach(icon => {
             Object.assign(icon.style, {
                 webkitBoxReflect: 'right 1px linear-gradient(transparent, #0005)',
             });
+        });
+        Object.assign(cardProjectHover1.style, {
+            width: '250px',
+            height: '110px',
+        });
+        Object.assign(cardProjectHover2.style, {
+            width: '250px',
+            height: '110px',
+        });
+        Object.assign(cardProjectHover3.style, {
+            width: '250px',
+            height: '110px',
+        });
+        Object.assign(cardBaru.style, {
+            width: '250px',
+            height: '110px',
+        });
+        Object.assign(cardBaru2.style, {
+            width: '250px',
+            height: '110px',
+        });
+        Object.assign(iGithub.style, {
+            fontSize: '7rem',
+            position: 'relative',
+            top: '50%'
+        });
+        Object.assign(spanGithub.style, {
+            position: 'relative',
+            top: '20%',
+            fontSize: '1.2rem'
         });
     }
 }
@@ -424,42 +800,72 @@ window.onload = applyResponsiveStyles;
 // This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
 
 // DOM
-// card baru
+// card Project baru
 const projectSlide = document.querySelector('#projects .slide');
 const githubIcon = document.getElementById('github');
 
-// buat card baru
+
+// card baru
 const cardBaru = document.createElement('div');
 cardBaru.setAttribute('class', 'card');
 // masukkan card baru
 projectSlide.insertBefore(cardBaru, githubIcon);
-cardBaru.style.position = 'relative';
-cardBaru.style.top = '5%';
-
-// buat tag i
-const iBaru = document.createElement('i');
-iBaru.setAttribute('class', 'fa-solid fa-4');
-// masukkan i
-cardBaru.appendChild(iBaru);
+Object.assign(cardBaru.style, {
+    position: 'relative',
+    top: '20%',
+    width: '310px',
+    height: '140px',
+    cursor: 'default',
+    transition: 'all 0.5s',
+    boxShadow: 'none',
+    border: 'none'
+});
 
 // element class image
 const imageBaru = document.createElement('div');
 imageBaru.setAttribute('class', 'image');
 // masukkan image
 cardBaru.appendChild(imageBaru);
+Object.assign(imageBaru.style, {
+    position: 'relative',
+    top: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '1',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+    boxShadow: '5px 5px 10px black'
+});
 
-// element img
+// tag img
 const imgBaru = document.createElement('img');
 imgBaru.setAttribute('src', 'gambar/website company.png');
 imgBaru.setAttribute('alt', 'image');
 // masukkan img
 imageBaru.appendChild(imgBaru);
+Object.assign(imgBaru.style, {
+    width: '100%',
+    height: '100%',
+    margin: '0',
+    objectFit: 'cover',
+    borderRadius: '5px',
+});
 
 // element class card-body
 const cardBodyBaru = document.createElement('div');
 cardBodyBaru.setAttribute('class', 'card-body');
 // masukkan card-body
 cardBaru.appendChild(cardBodyBaru);
+Object.assign(cardBodyBaru.style, {
+    position: 'absolute',
+    bottom: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '0',
+    backgroundColor: '#696ca7',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+});
 
 // tag h5
 const h5Baru = document.createElement('h5');
@@ -467,49 +873,116 @@ h5Baru.setAttribute('class', 'card-title');
 h5Baru.innerHTML = 'Website Company';
 // masukkan h5
 cardBodyBaru.appendChild(h5Baru);
+Object.assign(h5Baru.style, {
+    position: 'relative',
+    top: '25%',
+    color: '#ffffff',
+});
 
-// tag p
-const pBaru = document.createElement('p');
-pBaru.classList.add('card-text');
-pBaru.innerText = `Membuat pemrograman UI website company menggunakan pemrograman html, css (bootstrap 5)
-            dan javascript. (double-click to see result)`;
-// masukkan p
-cardBodyBaru.appendChild(pBaru);
+// tag button
+const buttonBaru = document.createElement('button');
+buttonBaru.appendChild(document.createTextNode('See Result'));
+h5Baru.after(buttonBaru);
+Object.assign(buttonBaru.style, {
+    position: 'relative',
+    top: '20%',
+    color: '#696ca7',
+    width: '100px',
+    height: '30px',
+    backgroundColor: '#ffffff',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    border: 'none',
+    outline: 'none',
+    transition: 'all 0.3s ease',
+});
+buttonBaru.addEventListener('click', function () {
+    window.location.href = 'https://setyabudipratama.github.io/company';
+});
+buttonBaru.addEventListener('mouseenter', function () {
+    Object.assign(imgBaru.style, {
+        transform: 'scale(1)',
+    });
+    Object.assign(buttonBaru.style, {
+        backgroundColor: 'transparent',
+        color: '#ffffff'
+    });
+});
+buttonBaru.addEventListener('mouseleave', function () {
+    Object.assign(buttonBaru.style, {
+        backgroundColor: '#ffffff',
+        color: '#696ca7'
+    });
+});
 
 cardBaru.addEventListener('mouseenter', function () {
-    cardBaru.style.transition = 'all 0.5s';
-    cardBaru.style.transform = 'translateY(-1.5rem)';
+    Object.assign(cardBaru.style, {
+        transform: 'translateY(-1.5rem)'
+    });
+    Object.assign(cardBodyBaru.style, {
+        transform: 'translateY(70px)',
+    });
+    Object.assign(imageBaru.style, {
+        borderRadius: '5px 5px 0 0',
+        boxShadow: 'none'
+    });
+    Object.assign(imgBaru.style, {
+        borderRadius: '5px 5px 0 0',
+    });
     imgBaru.style.scale = '1';
 });
 cardBaru.addEventListener('mouseleave', function () {
-    cardBaru.style.transform = 'translateY(0)';
+    Object.assign(cardBaru.style, {
+        transform: 'translateY(0)'
+    });
+    Object.assign(cardBodyBaru.style, {
+        borderRadius: '5px',
+        transform: 'translate(0)',
+    });
+    Object.assign(imageBaru.style, {
+        borderRadius: '5px',
+        boxShadow: '5px 5px 10px black'
+    });
+    Object.assign(imageBaru.style, {
+        borderRadius: '5px',
+    });
 });
 
-cardBaru.addEventListener('dblclick', function () {
-    window.location.href = 'https://setyabudipratama.github.io/company';
-});
 
-
-// DOM
-// buat card baru 2
+// card baru 2
 const cardBaru2 = document.createElement('div');
 cardBaru2.setAttribute('class', 'card');
 // masukkan card baru
 projectSlide.insertBefore(cardBaru2, githubIcon);
-cardBaru2.style.position = 'relative';
-cardBaru2.style.top = '5%';
-
-// buat tag i
-const iBaru2 = document.createElement('i');
-iBaru2.setAttribute('class', 'fa-solid fa-5');
-// masukkan i
-cardBaru2.appendChild(iBaru2);
+Object.assign(cardBaru2.style, {
+    position: 'relative',
+    top: '20%',
+    width: '310px',
+    height: '140px',
+    cursor: 'default',
+    transition: 'all 0.5s',
+    boxShadow: 'none',
+    border: 'none'
+});
 
 // element class image
 const imageBaru2 = document.createElement('div');
 imageBaru2.setAttribute('class', 'image');
 // masukkan image
 cardBaru2.appendChild(imageBaru2);
+Object.assign(imageBaru2.style, {
+    position: 'relative',
+    top: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '1',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+    boxShadow: '5px 5px 10px black'
+});
 
 // tag img
 const imgBaru2 = document.createElement('img');
@@ -517,12 +990,29 @@ imgBaru2.setAttribute('src', 'gambar/website wisata.png');
 imgBaru2.setAttribute('alt', 'image');
 // masukkan img
 imageBaru2.appendChild(imgBaru2);
+Object.assign(imgBaru2.style, {
+    width: '100%',
+    height: '100%',
+    margin: '0',
+    objectFit: 'cover',
+    borderRadius: '5px',
+});
 
 // element class card-body
 const cardBodyBaru2 = document.createElement('div');
 cardBodyBaru2.setAttribute('class', 'card-body');
 // masukkan card-body
 cardBaru2.appendChild(cardBodyBaru2);
+Object.assign(cardBodyBaru2.style, {
+    position: 'absolute',
+    bottom: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '0',
+    backgroundColor: '#696ca7',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+});
 
 // tag h5
 const h5Baru2 = document.createElement('h5');
@@ -530,28 +1020,83 @@ h5Baru2.setAttribute('class', 'card-title');
 h5Baru2.innerHTML = 'Website Wisata';
 // masukkan h5
 cardBodyBaru2.appendChild(h5Baru2);
+Object.assign(h5Baru2.style, {
+    position: 'relative',
+    top: '25%',
+    color: '#ffffff',
+});
 
-// tag p
-const pBaru2 = document.createElement('p');
-pBaru2.classList.add('card-text');
-pBaru2.innerText = `Membuat pemrograman UI website wisata menggunakan pemrograman html, css (bootstrap 5)
-            dan javascript. (double-click to see result)`;
-// masukkan p
-cardBodyBaru2.appendChild(pBaru2);
+// tag button
+const buttonBaru2 = document.createElement('button');
+buttonBaru2.appendChild(document.createTextNode('See Result'));
+h5Baru2.after(buttonBaru2);
+Object.assign(buttonBaru2.style, {
+    position: 'relative',
+    top: '20%',
+    color: '#696ca7',
+    width: '100px',
+    height: '30px',
+    backgroundColor: '#ffffff',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    border: 'none',
+    outline: 'none',
+    transition: 'all 0.3s ease',
+});
+buttonBaru2.addEventListener('click', function () {
+    window.location.href = 'https://setyabudipratama.github.io/wisata';
+});
+buttonBaru2.addEventListener('mouseenter', function () {
+    Object.assign(imgBaru2.style, {
+        transform: 'scale(1)',
+    });
+    Object.assign(buttonBaru2.style, {
+        backgroundColor: 'transparent',
+        color: '#ffffff'
+    });
+});
+buttonBaru2.addEventListener('mouseleave', function () {
+    Object.assign(buttonBaru2.style, {
+        backgroundColor: '#ffffff',
+        color: '#696ca7'
+    });
+});
 
 cardBaru2.addEventListener('mouseenter', function () {
-    cardBaru2.style.transition = 'all 0.5s';
-    cardBaru2.style.transform = 'translateY(-1.5rem)';
+    Object.assign(cardBaru2.style, {
+        transform: 'translateY(-1.5rem)'
+    });
+    Object.assign(cardBodyBaru2.style, {
+        transform: 'translateY(70px)',
+    });
+    Object.assign(imageBaru2.style, {
+        borderRadius: '5px 5px 0 0',
+        boxShadow: 'none'
+    });
+    Object.assign(imgBaru2.style, {
+        borderRadius: '5px 5px 0 0',
+    });
     imgBaru2.style.scale = '1';
 });
 cardBaru2.addEventListener('mouseleave', function () {
-    cardBaru2.style.transform = 'translateY(0)';
+    Object.assign(cardBaru2.style, {
+        transform: 'translateY(0)'
+    });
+    Object.assign(cardBodyBaru2.style, {
+        borderRadius: '5px',
+        transform: 'translate(0)',
+    });
+    Object.assign(imageBaru2.style, {
+        borderRadius: '5px',
+        boxShadow: '5px 5px 10px black'
+    });
+    Object.assign(imgBaru2.style, {
+        borderRadius: '5px',
+    });
 });
-
-cardBaru2.addEventListener('dblclick', function () {
-    window.location.href = 'https://setyabudipratama.github.io/wisata';
-});
-
 
 // Copyright (C) 2024 Setya Budi Pratama
 
