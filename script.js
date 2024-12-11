@@ -1115,33 +1115,32 @@ cardBaru2.addEventListener('mouseleave', function () {
 
 // DOM
 // aktif hanya untuk website dengan perubahan baru
-// // project 1
-// const cardProject1 = document.querySelector('#projects .card');
-// Object.assign(cardProject1.style, {
-//     border: '5px solid',
-//     animation: 'animateSpin 4s linear infinite'
-// });
-// const style1 = document.createElement('style');
-// style1.innerHTML = `
-//     @keyframes animateSpin {
-//     0% {
-//         border-color: yellow;
-//         /* warna border berubah */
-//     }
-//     30% {
-//         border-color: lightblue;
-//     }
-//     57% {
-//         border-color: blue;
-//     }
-//     77% {
-//         border-color: purple;
-//     }
-//     100% {
-//         border-color: yellow;
-//     }
-// }`;
-// document.head.appendChild(style);
+// project 1
+const cardProject1 = document.querySelector('#projects .card');
+Object.assign(cardProject1.style, {
+    border: '5px solid',
+    animation: 'animateSpin 4s linear infinite'
+});
+const style1 = document.createElement('style');
+style1.innerHTML = `
+    @keyframes animateSpin {
+    0% {
+        border-color: yellow;
+    }
+    30% {
+        border-color: lightblue;
+    }
+    57% {
+        border-color: blue;
+    }
+    77% {
+        border-color: purple;
+    }
+    100% {
+        border-color: yellow;
+    }
+}`;
+document.head.appendChild(style);
 
 // // project 2
 // const cardProject2 = document.querySelector('#projects .card:nth-child(2)');
@@ -1154,7 +1153,6 @@ cardBaru2.addEventListener('mouseleave', function () {
 //     @keyframes animateSpin {
 //     0% {
 //         border-color: yellow;
-//         /* warna border berubah */
 //     }
 //     30% {
 //         border-color: lightblue;
@@ -1182,7 +1180,6 @@ cardBaru2.addEventListener('mouseleave', function () {
 //     @keyframes animateSpin {
 //     0% {
 //         border-color: yellow;
-//         /* warna border berubah */
 //     }
 //     30% {
 //         border-color: lightblue;
@@ -1210,7 +1207,6 @@ cardBaru2.addEventListener('mouseleave', function () {
 //     @keyframes animateSpin {
 //     0% {
 //         border-color: yellow;
-//         /* warna border berubah */
 //     }
 //     30% {
 //         border-color: lightblue;
@@ -1238,7 +1234,6 @@ cardBaru2.addEventListener('mouseleave', function () {
 //     @keyframes animateSpin {
 //     0% {
 //         border-color: yellow;
-//         /* warna border berubah */
 //     }
 //     30% {
 //         border-color: lightblue;
