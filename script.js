@@ -1116,33 +1116,33 @@ cardBaru2.addEventListener('mouseleave', function () {
 // DOM
 // aktif hanya untuk website dengan perubahan baru
 // project 1
-const cardProject1 = document.querySelector('#projects .card');
-Object.assign(cardProject1.style, {
-    border: '5px solid',
-    animation: 'animateSpin 4s linear infinite'
-});
-const style1 = document.createElement('style');
-style1.innerHTML = `
-    @keyframes animateSpin {
-    0% {
-        border-color: yellow;
-    }
-    30% {
-        border-color: lightblue;
-    }
-    57% {
-        border-color: blue;
-    }
-    77% {
-        border-color: purple;
-    }
-    100% {
-        border-color: yellow;
-    }
-}`;
-document.head.appendChild(style);
+// const cardProject1 = document.querySelector('#projects .card');
+// Object.assign(cardProject1.style, {
+//     border: '5px solid',
+//     animation: 'animateSpin 4s linear infinite'
+// });
+// const style1 = document.createElement('style');
+// style1.innerHTML = `
+//     @keyframes animateSpin {
+//     0% {
+//         border-color: yellow;
+//     }
+//     30% {
+//         border-color: lightblue;
+//     }
+//     57% {
+//         border-color: blue;
+//     }
+//     77% {
+//         border-color: purple;
+//     }
+//     100% {
+//         border-color: yellow;
+//     }
+// }`;
+// document.head.appendChild(style);
 
-// // project 2
+// project 2
 // const cardProject2 = document.querySelector('#projects .card:nth-child(2)');
 // Object.assign(cardProject2.style, {
 //     border: '5px solid',
@@ -1169,7 +1169,7 @@ document.head.appendChild(style);
 // }`;
 // document.head.appendChild(style);
 
-// // project 3
+// project 3
 // const cardProject3 = document.querySelector('#projects .card:nth-child(3)');
 // Object.assign(cardProject3.style, {
 //     border: '5px solid',
@@ -1196,7 +1196,7 @@ document.head.appendChild(style);
 // }`;
 // document.head.appendChild(style);
 
-// // project 4
+// project 4
 // const cardProject4 = document.querySelector('#projects .card:nth-child(4)');
 // Object.assign(cardProject4.style, {
 //     border: '5px solid',
@@ -1223,7 +1223,7 @@ document.head.appendChild(style);
 // }`;
 // document.head.appendChild(style);
 
-// // project 5
+// project 5
 // const cardProject5 = document.querySelector('#projects .card:nth-child(5)');
 // Object.assign(cardProject5.style, {
 //     border: '5px solid',
