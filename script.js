@@ -285,6 +285,29 @@ projects.addEventListener('click', function () {
 
 
 // DOM
+// animation header
+const textHeader = document.querySelector('header .text');
+const h2Header = document.querySelector('header .text h2');
+const pHeader = document.querySelector('header .text p');
+Object.assign(textHeader.style, {
+    background: 'none',
+    backdropFilter: 'none',
+})
+h2Header.style.animation = 'shake 2s ease-in-out infinite';
+pHeader.style.animation = 'shake 2s ease-in-out infinite';
+const styleHeader = document.createElement('style');
+styleHeader.innerHTML = `
+    @keyframes shake {
+    0%, 100% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}`;
+document.head.appendChild(styleHeader);
+
+// DOM
 // update skill html, css dan javascript
 const htmlText = document.querySelector('#skills .icon:first-child h5:last-child');
 const cssText = document.querySelector('#skills .icon:nth-child(2) h5:last-child');
@@ -746,6 +769,12 @@ btnContact.addEventListener('click', function () {
 
 function applyResponsiveStyles() {
     if (window.innerWidth < 767) {
+        Object.assign(h2Header.style, {
+            fontSize: '1rem'
+        });
+        Object.assign(pHeader.style, {
+            fontSize: '0.8rem'
+        });
         pAboutUs.style.width = '210px';
         Object.assign(slideProject.style, {
             height: '40vh',
@@ -1261,44 +1290,11 @@ cardBaru2.addEventListener('mouseleave', function () {
 // This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
 
 // DOM
-// animation header
-const textHeader = document.querySelector('header .text');
-const h2Header = document.querySelector('header .text h2');
-const pHeader = document.querySelector('header .text p');
-Object.assign(textHeader.style, {
-    background: 'none',
-    backdropFilter: 'none',
-})
-h2Header.style.animation = 'shake 2s ease-in-out infinite';
-pHeader.style.animation = 'shake 2s ease-in-out infinite';
-const styleHeader = document.createElement('style');
-styleHeader.innerHTML = `
-    @keyframes shake {
-    0%, 100% {
-        transform: translateY(-5px);
-    }
-    50% {
-        transform: translateY(5px);
-    }
-}`;
-document.head.appendChild(styleHeader);
-
-
-// Copyright (C) 2024 Setya Budi Pratama
-
-// All rights reserved.
-
-// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
-// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
-
-// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
-
-// DOM
 // rubah cardText projets
 const cardTextProjects = document.querySelectorAll('#projects .card-text');
 for (let i = 0; i < cardTextProjects.length; i++) {
     cardTextProjects[i].innerHTML = '(double-click to see result)';
 };
 
-const cardTextGithub = document.querySelector('#github .card-text');
-cardTextGithub.innerHTML = 'See More';
+// const cardTextGithub = document.querySelector('#github .card-text');
+// cardTextGithub.innerHTML = 'See More';
