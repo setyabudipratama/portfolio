@@ -1133,6 +1133,154 @@ cardBaru2.addEventListener('mouseleave', function () {
     });
 });
 
+
+// card baru 3
+const cardBaru3 = document.createElement('div');
+cardBaru3.setAttribute('class', 'card');
+// masukkan card baru
+projectSlide.insertBefore(cardBaru3, githubIcon);
+Object.assign(cardBaru3.style, {
+    position: 'relative',
+    top: '20%',
+    width: '310px',
+    height: '140px',
+    cursor: 'default',
+    transition: 'all 0.5s',
+    boxShadow: 'none',
+    border: 'none'
+});
+
+// element class image
+const imageBaru3 = document.createElement('div');
+imageBaru3.setAttribute('class', 'image');
+// masukkan image
+cardBaru3.appendChild(imageBaru3);
+Object.assign(imageBaru3.style, {
+    position: 'relative',
+    top: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '1',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+    boxShadow: '5px 5px 10px black'
+});
+
+// tag img
+const imgBaru3 = document.createElement('img');
+imgBaru3.setAttribute('src', 'gambar/website mobil.png');
+imgBaru3.setAttribute('alt', 'image');
+// masukkan img
+imageBaru3.appendChild(imgBaru3);
+Object.assign(imgBaru3.style, {
+    width: '100%',
+    height: '100%',
+    margin: '0',
+    objectFit: 'cover',
+    borderRadius: '5px',
+});
+
+// element class card-body
+const cardBodyBaru3 = document.createElement('div');
+cardBodyBaru3.setAttribute('class', 'card-body');
+// masukkan card-body
+cardBaru3.appendChild(cardBodyBaru3);
+Object.assign(cardBodyBaru3.style, {
+    position: 'absolute',
+    bottom: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '0',
+    backgroundColor: '#696ca7',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+});
+
+// tag h5
+const h5Baru3 = document.createElement('h5');
+h5Baru3.setAttribute('class', 'card-title');
+h5Baru3.innerHTML = 'Website mobil';
+// masukkan h5
+cardBodyBaru3.appendChild(h5Baru3);
+Object.assign(h5Baru3.style, {
+    position: 'relative',
+    top: '27%',
+    color: '#ffffff'
+});
+
+// tag button
+const buttonBaru3 = document.createElement('button');
+buttonBaru3.appendChild(document.createTextNode('See Result'));
+h5Baru3.after(buttonBaru3);
+Object.assign(buttonBaru3.style, {
+    position: 'relative',
+    top: '20%',
+    color: '#696ca7',
+    width: '100px',
+    height: '30px',
+    backgroundColor: '#ffffff',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    border: 'none',
+    outline: 'none',
+    transition: 'all 0.3s ease',
+});
+buttonBaru3.addEventListener('click', function () {
+    window.location.href = 'https://setyabudipratama.github.io/car';
+});
+buttonBaru3.addEventListener('mouseenter', function () {
+    Object.assign(imgBaru3.style, {
+        transform: 'scale(1)',
+    });
+    Object.assign(buttonBaru3.style, {
+        backgroundColor: 'transparent',
+        color: '#ffffff'
+    });
+});
+buttonBaru3.addEventListener('mouseleave', function () {
+    Object.assign(buttonBaru3.style, {
+        backgroundColor: '#ffffff',
+        color: '#696ca7'
+    });
+});
+
+cardBaru3.addEventListener('mouseenter', function () {
+    Object.assign(cardBaru3.style, {
+        transform: 'translateY(-1.5rem)'
+    });
+    Object.assign(cardBodyBaru3.style, {
+        transform: 'translateY(70px)',
+    });
+    Object.assign(imageBaru3.style, {
+        borderRadius: '5px 5px 0 0',
+        boxShadow: 'none'
+    });
+    Object.assign(imgBaru3.style, {
+        borderRadius: '5px 5px 0 0',
+        scale: '1'
+    });
+});
+cardBaru3.addEventListener('mouseleave', function () {
+    Object.assign(cardBaru3.style, {
+        transform: 'translateY(0)'
+    });
+    Object.assign(cardBodyBaru3.style, {
+        borderRadius: '5px',
+        transform: 'translate(0)',
+    });
+    Object.assign(imageBaru3.style, {
+        borderRadius: '5px',
+        boxShadow: '5px 5px 10px black'
+    });
+    Object.assign(imgBaru3.style, {
+        borderRadius: '5px',
+    });
+});
+
+
 // Copyright (C) 2024 Setya Budi Pratama
 
 // All rights reserved.
@@ -1150,11 +1298,13 @@ cardBaru2.addEventListener('mouseleave', function () {
 //     border: '5px solid',
 //     animation: 'animateSpin 4s linear infinite'
 // });
+// imageCardHover1.style.boxShadow = 'none';
 // const style1 = document.createElement('style');
 // style1.innerHTML = `
 //     @keyframes animateSpin {
 //     0% {
 //         border-color: yellow;
+//         /* warna border berubah */
 //     }
 //     30% {
 //         border-color: lightblue;
@@ -1177,11 +1327,13 @@ cardBaru2.addEventListener('mouseleave', function () {
 //     border: '5px solid',
 //     animation: 'animateSpin 4s linear infinite'
 // });
+// imageCardHover2.style.boxShadow = 'none';
 // const style2 = document.createElement('style');
 // style2.innerHTML = `
 //     @keyframes animateSpin {
 //     0% {
 //         border-color: yellow;
+//         /* warna border berubah */
 //     }
 //     30% {
 //         border-color: lightblue;
@@ -1204,11 +1356,13 @@ cardBaru2.addEventListener('mouseleave', function () {
 //     border: '5px solid',
 //     animation: 'animateSpin 4s linear infinite'
 // });
+// imageCardHover3.style.boxShadow = 'none';
 // const style3 = document.createElement('style');
 // style3.innerHTML = `
 //     @keyframes animateSpin {
 //     0% {
 //         border-color: yellow;
+//         /* warna border berubah */
 //     }
 //     30% {
 //         border-color: lightblue;
@@ -1231,11 +1385,13 @@ cardBaru2.addEventListener('mouseleave', function () {
 //     border: '5px solid',
 //     animation: 'animateSpin 4s linear infinite'
 // });
+// imageBaru.style.boxShadow = 'none';
 // const style4 = document.createElement('style');
 // style4.innerHTML = `
 //     @keyframes animateSpin {
 //     0% {
 //         border-color: yellow;
+//         /* warna border berubah */
 //     }
 //     30% {
 //         border-color: lightblue;
@@ -1258,11 +1414,13 @@ cardBaru2.addEventListener('mouseleave', function () {
 //     border: '5px solid',
 //     animation: 'animateSpin 4s linear infinite'
 // });
+// imageBaru2.style.boxShadow = 'none';
 // const style5 = document.createElement('style');
 // style5.innerHTML = `
 //     @keyframes animateSpin {
 //     0% {
 //         border-color: yellow;
+//         /* warna border berubah */
 //     }
 //     30% {
 //         border-color: lightblue;
@@ -1278,6 +1436,35 @@ cardBaru2.addEventListener('mouseleave', function () {
 //     }
 // }`;
 // document.head.appendChild(style);
+
+// project 6
+const cardProject6 = document.querySelector('#projects .card:nth-child(6)');
+Object.assign(cardProject6.style, {
+    border: '5px solid',
+    animation: 'animateSpin 4s linear infinite'
+});
+imageBaru3.style.boxShadow = 'none';
+const style6 = document.createElement('style');
+style6.innerHTML = `
+    @keyframes animateSpin {
+    0% {
+        border-color: yellow;
+        /* warna border berubah */
+    }
+    30% {
+        border-color: lightblue;
+    }
+    57% {
+        border-color: blue;
+    }
+    77% {
+        border-color: purple;
+    }
+    100% {
+        border-color: yellow;
+    }
+}`;
+document.head.appendChild(style);
 
 
 // Copyright (C) 2024 Setya Budi Pratama
