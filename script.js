@@ -804,6 +804,10 @@ function applyResponsiveStyles() {
             width: '260px',
             height: '120px',
         });
+        Object.assign(cardBaru3.style, {
+            width: '260px',
+            height: '120px',
+        });
         Object.assign(iGithub.style, {
             fontSize: '7rem',
             position: 'relative',
