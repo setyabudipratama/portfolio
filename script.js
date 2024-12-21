@@ -1442,33 +1442,33 @@ cardBaru3.addEventListener('mouseleave', function () {
 // document.head.appendChild(style);
 
 // project 6
-const cardProject6 = document.querySelector('#projects .card:nth-child(6)');
-Object.assign(cardProject6.style, {
-    border: '5px solid',
-    animation: 'animateSpin 4s linear infinite'
-});
-imageBaru3.style.boxShadow = 'none';
-const style6 = document.createElement('style');
-style6.innerHTML = `
-    @keyframes animateSpin {
-    0% {
-        border-color: yellow;
-        /* warna border berubah */
-    }
-    30% {
-        border-color: lightblue;
-    }
-    57% {
-        border-color: blue;
-    }
-    77% {
-        border-color: purple;
-    }
-    100% {
-        border-color: yellow;
-    }
-}`;
-document.head.appendChild(style);
+// const cardProject6 = document.querySelector('#projects .card:nth-child(6)');
+// Object.assign(cardProject6.style, {
+//     border: '5px solid',
+//     animation: 'animateSpin 4s linear infinite'
+// });
+// imageBaru3.style.boxShadow = 'none';
+// const style6 = document.createElement('style');
+// style6.innerHTML = `
+//     @keyframes animateSpin {
+//     0% {
+//         border-color: yellow;
+//         /* warna border berubah */
+//     }
+//     30% {
+//         border-color: lightblue;
+//     }
+//     57% {
+//         border-color: blue;
+//     }
+//     77% {
+//         border-color: purple;
+//    }
+//     100% {
+//         border-color: yellow;
+//     }
+// }`;
+// document.head.appendChild(style);
 
 
 // Copyright (C) 2024 Setya Budi Pratama
