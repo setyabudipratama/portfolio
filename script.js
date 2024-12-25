@@ -784,30 +784,6 @@ function applyResponsiveStyles() {
                 webkitBoxReflect: 'right 1px linear-gradient(transparent, #0005)',
             });
         });
-        Object.assign(cardProjectHover1.style, {
-            width: '260px',
-            height: '120px',
-        });
-        Object.assign(cardProjectHover2.style, {
-            width: '260px',
-            height: '120px',
-        });
-        Object.assign(cardProjectHover3.style, {
-            width: '260px',
-            height: '120px',
-        });
-        Object.assign(cardBaru.style, {
-            width: '260px',
-            height: '120px',
-        });
-        Object.assign(cardBaru2.style, {
-            width: '260px',
-            height: '120px',
-        });
-        Object.assign(cardBaru3.style, {
-            width: '260px',
-            height: '120px',
-        });
         Object.assign(iGithub.style, {
             fontSize: '7rem',
             position: 'relative',
@@ -1303,6 +1279,12 @@ cardBaru3.addEventListener('mouseleave', function () {
 //     animation: 'animateSpin 4s linear infinite'
 // });
 // imageCardHover1.style.boxShadow = 'none';
+// cardProjectHover1.addEventListener('mouseenter', function () {
+//     imageCardHover1.style.boxShadow = 'none';
+// });
+// cardProjectHover1.addEventListener('mouseleave', function () {
+//     imageCardHover1.style.boxShadow = 'none';
+// });
 // const style1 = document.createElement('style');
 // style1.innerHTML = `
 //     @keyframes animateSpin {
@@ -1332,6 +1314,12 @@ cardBaru3.addEventListener('mouseleave', function () {
 //     animation: 'animateSpin 4s linear infinite'
 // });
 // imageCardHover2.style.boxShadow = 'none';
+// cardProjectHover2.addEventListener('mouseenter', function () {
+//     imageCardHover2.style.boxShadow = 'none';
+// });
+// cardProjectHover2.addEventListener('mouseleave', function () {
+//     imageCardHover2.style.boxShadow = 'none';
+// });
 // const style2 = document.createElement('style');
 // style2.innerHTML = `
 //     @keyframes animateSpin {
@@ -1361,6 +1349,12 @@ cardBaru3.addEventListener('mouseleave', function () {
 //     animation: 'animateSpin 4s linear infinite'
 // });
 // imageCardHover3.style.boxShadow = 'none';
+// cardProjectHover3.addEventListener('mouseenter', function () {
+//     imageCardHover3.style.boxShadow = 'none';
+// });
+// cardProjectHover3.addEventListener('mouseleave', function () {
+//     imageCardHover3.style.boxShadow = 'none';
+// });
 // const style3 = document.createElement('style');
 // style3.innerHTML = `
 //     @keyframes animateSpin {
@@ -1390,6 +1384,12 @@ cardBaru3.addEventListener('mouseleave', function () {
 //     animation: 'animateSpin 4s linear infinite'
 // });
 // imageBaru.style.boxShadow = 'none';
+// cardBaru.addEventListener('mouseenter', function () {
+//     imageBaru.style.boxShadow = 'none';
+// });
+// cardBaru.addEventListener('mouseleave', function () {
+//     imageBaru.style.boxShadow = 'none';
+// });
 // const style4 = document.createElement('style');
 // style4.innerHTML = `
 //     @keyframes animateSpin {
@@ -1413,41 +1413,53 @@ cardBaru3.addEventListener('mouseleave', function () {
 // document.head.appendChild(style);
 
 // project 5
-// const cardProject5 = document.querySelector('#projects .card:nth-child(5)');
-// Object.assign(cardProject5.style, {
-//     border: '5px solid',
-//     animation: 'animateSpin 4s linear infinite'
-// });
-// imageBaru2.style.boxShadow = 'none';
-// const style5 = document.createElement('style');
-// style5.innerHTML = `
-//     @keyframes animateSpin {
-//     0% {
-//         border-color: yellow;
-//         /* warna border berubah */
-//     }
-//     30% {
-//         border-color: lightblue;
-//     }
-//     57% {
-//         border-color: blue;
-//     }
-//     77% {
-//         border-color: purple;
-//     }
-//     100% {
-//         border-color: yellow;
-//     }
-// }`;
-// document.head.appendChild(style);
+const cardProject5 = document.querySelector('#projects .card:nth-child(5)');
+Object.assign(cardProject5.style, {
+    border: '5px solid',
+    animation: 'animateSpin 4s linear infinite'
+});
+imageBaru2.style.boxShadow = 'none';
+cardBaru2.addEventListener('mouseenter', function () {
+    imageBaru2.style.boxShadow = 'none';
+});
+cardBaru2.addEventListener('mouseleave', function () {
+    imageBaru2.style.boxShadow = 'none';
+});
+const style5 = document.createElement('style');
+style5.innerHTML = `
+    @keyframes animateSpin {
+    0% {
+        border-color: yellow;
+        /* warna border berubah */
+    }
+    30% {
+        border-color: lightblue;
+    }
+    57% {
+        border-color: blue;
+    }
+    77% {
+        border-color: purple;
+    }
+    100% {
+        border-color: yellow;
+    }
+}`;
+document.head.appendChild(style);
 
 // project 6
 // const cardProject6 = document.querySelector('#projects .card:nth-child(6)');
 // Object.assign(cardProject6.style, {
 //     border: '5px solid',
 //     animation: 'animateSpin 4s linear infinite'
-// });
+// })
 // imageBaru3.style.boxShadow = 'none';
+// cardBaru3.addEventListener('mouseenter', function () {
+//     imageBaru3.style.boxShadow = 'none';
+// });
+// cardBaru3.addEventListener('mouseleave', function () {
+//     imageBaru3.style.boxShadow = 'none';
+// });
 // const style6 = document.createElement('style');
 // style6.innerHTML = `
 //     @keyframes animateSpin {
@@ -1463,7 +1475,7 @@ cardBaru3.addEventListener('mouseleave', function () {
 //     }
 //     77% {
 //         border-color: purple;
-//    }
+//     }
 //     100% {
 //         border-color: yellow;
 //     }
