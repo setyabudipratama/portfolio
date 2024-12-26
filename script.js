@@ -1413,39 +1413,39 @@ cardBaru3.addEventListener('mouseleave', function () {
 // document.head.appendChild(style);
 
 // project 5
-const cardProject5 = document.querySelector('#projects .card:nth-child(5)');
-Object.assign(cardProject5.style, {
-    border: '5px solid',
-    animation: 'animateSpin 4s linear infinite'
-});
-imageBaru2.style.boxShadow = 'none';
-cardBaru2.addEventListener('mouseenter', function () {
-    imageBaru2.style.boxShadow = 'none';
-});
-cardBaru2.addEventListener('mouseleave', function () {
-    imageBaru2.style.boxShadow = 'none';
-});
-const style5 = document.createElement('style');
-style5.innerHTML = `
-    @keyframes animateSpin {
-    0% {
-        border-color: yellow;
-        /* warna border berubah */
-    }
-    30% {
-        border-color: lightblue;
-    }
-    57% {
-        border-color: blue;
-    }
-    77% {
-        border-color: purple;
-    }
-    100% {
-        border-color: yellow;
-    }
-}`;
-document.head.appendChild(style);
+// const cardProject5 = document.querySelector('#projects .card:nth-child(5)');
+// Object.assign(cardProject5.style, {
+//     border: '5px solid',
+//     animation: 'animateSpin 4s linear infinite'
+// });
+// imageBaru2.style.boxShadow = 'none';
+// cardBaru2.addEventListener('mouseenter', function () {
+//     imageBaru2.style.boxShadow = 'none';
+// });
+// cardBaru2.addEventListener('mouseleave', function () {
+//     imageBaru2.style.boxShadow = 'none';
+// });
+// const style5 = document.createElement('style');
+// style5.innerHTML = `
+//     @keyframes animateSpin {
+//     0% {
+//         border-color: yellow;
+//         /* warna border berubah */
+//     }
+//     30% {
+//         border-color: lightblue;
+//     }
+//     57% {
+//         border-color: blue;
+//     }
+//     77% {
+//         border-color: purple;
+//     }
+//     100% {
+//         border-color: yellow;
+//     }
+// }`;
+// document.head.appendChild(style);
 
 // project 6
 // const cardProject6 = document.querySelector('#projects .card:nth-child(6)');
