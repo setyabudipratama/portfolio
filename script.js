@@ -153,7 +153,7 @@ body.style.background = 'transparent';
             scale: 1.00,
             scaleMobile: 1.00,
             maxDistance: 30.00,
-            spacing: 25.00,
+            spacing: 20.00,
             point: 10.00
         });
     } catch (error) {
