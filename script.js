@@ -80,6 +80,83 @@ iconHtml.style.color = 'red';
 iconCss.style.color = 'blue';
 iconJavascript.style.color = 'yellow';
 
+
+// Copyright (C) 2024 Setya Budi Pratama
+
+// All rights reserved.
+
+// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
+// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
+
+// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
+
+// DOM
+document.querySelector('.background').remove();
+const spanBg = document.querySelectorAll('.background span');
+spanBg.forEach(span => {
+    span.remove();
+});
+const body = document.querySelector('body');
+body.style.background = 'transparent';
+
+(async () => {
+    const loadScript = async (src, integrity) => {
+
+        // buat elemen script
+        const script = document.createElement('script');
+        script.src = src;
+        script.integrity = integrity,
+        script.crossOrigin = 'anonymous',
+        script.referrerPolicy = 'no-referrer'
+
+        // menambahkan ke head
+        document.head.appendChild(script);
+
+        // menunggu script selesai dimuat
+        return new Promise((resolve, reject) => {
+            script.onload = resolve; // jika berhasil
+            script.onerror = () => reject(new Error(`Gagal memuat ${src}`)); // jika gagal
+        });
+    };
+
+    try {
+        // memuat library three.js syarat untuk vanta.js
+        await loadScript("https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js", 'sha512-334uBDwY0iZ2TklV1OtDtBW9vp7jjP7SWRzT7Ehu1fdtPIjTpCwTSFb8HI/YBau9L1/kRBEOALrS229Kry4yFQ==');
+        // memuat library vanta.js
+        await loadScript("https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js", 'sha512-lH/5/byfwH0bqySiiSINJJoEoWFEBGKgOwsnAlZZPviNJI1DDBVXjPHgEkM0fowfOp6NMBAN4ROAYjx+uEkEjQ==');
+
+        // elemn div
+        const vantaBg = document.createElement('div');
+        // console.log(vantaBg);
+        vantaBg.setAttribute('id', 'vanta-bg');
+        document.body.appendChild(vantaBg);
+        Object.assign(vantaBg.style, {
+            width: '100%',
+            height: '100%',
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            zIndex: '-1'
+        });
+
+        // inisiasi evek vanta
+        VANTA.NET({
+            el: vantaBg,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 'black',
+            backgroundColor: 'skyblue',
+        });
+    } catch (error) {
+        console.error('Failed to load script:', error);
+    }
+})();
+
 // Copyright (C) 2024 Setya Budi Pratama
 
 // All rights reserved.
@@ -102,7 +179,15 @@ lamp.addEventListener('click', function (event) {
     event.preventDefault();
 
     const body = document.body;
-    const isNightMode = body.classList.toggle('night-mode');
+    if (body.classList.contains('night-mode')) {
+        Object.assign(body.style, {
+            background: 'rgba(0, 0, 0, 0.7)',
+        })
+    } else {
+        Object.assign(body.style, {
+            background: 'transparent',
+        })
+    }
 
     const colors = {
         day: {
@@ -123,7 +208,6 @@ lamp.addEventListener('click', function (event) {
         lamp.classList.add('fa-toggle-on');
     }
 
-    body.style.backgroundColor = isNightMode ? colors.night.background : colors.day.background;
     skillsh5.forEach(l => l.style.color = colors[isNightMode ? 'night' : 'day'].text);
     label.forEach(l => l.style.color = colors[isNightMode ? 'night' : 'day'].text);
     h2.forEach(h => h.style.color = colors[isNightMode ? 'night' : 'day'].text);
