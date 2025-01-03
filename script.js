@@ -144,7 +144,6 @@ body.style.background = 'transparent';
             el: vantaBg,
             mouseControls: true,
             touchControls: true,
-            gyroControls: true,
             showDots: true,
             color: 'black',
             backgroundColor: 'skyblue',
