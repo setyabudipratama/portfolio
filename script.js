@@ -189,6 +189,8 @@ lamp.addEventListener('click', function (event) {
         })
     }
 
+    const isNightMode = body.classList.toggle('night-mode');
+
     const colors = {
         day: {
             background: '#0C001F',
@@ -200,13 +202,8 @@ lamp.addEventListener('click', function (event) {
         }
     };
 
-    if (isNightMode) {
-        lamp.classList.remove('fa-toggle-on');
-        lamp.classList.add('fa-toggle-off');
-    } else {
-        lamp.classList.remove('fa-toggle-off');
-        lamp.classList.add('fa-toggle-on');
-    }
+    lamp.classList.toggle('fa-toggle-on', !isNightMode);
+    lamp.classList.toggle('fa-toggle-off', isNightMode);
 
     skillsh5.forEach(l => l.style.color = colors[isNightMode ? 'night' : 'day'].text);
     label.forEach(l => l.style.color = colors[isNightMode ? 'night' : 'day'].text);
