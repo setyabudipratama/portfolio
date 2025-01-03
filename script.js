@@ -144,13 +144,17 @@ body.style.background = 'transparent';
             el: vantaBg,
             mouseControls: true,
             touchControls: true,
-            gyroControls: false,
+            gyroControls: true,
+            showDots: true,
+            color: 'black',
+            backgroundColor: 'skyblue',
             minHeight: 200.00,
             minWidth: 200.00,
             scale: 1.00,
             scaleMobile: 1.00,
-            color: 'black',
-            backgroundColor: 'skyblue',
+            maxDistance: 30.00,
+            spacing: 25.00,
+            point: 10.00
         });
     } catch (error) {
         console.error('Failed to load script:', error);
