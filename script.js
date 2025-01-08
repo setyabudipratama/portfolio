@@ -176,6 +176,7 @@ const skillsh5 = document.querySelectorAll('#skills h5');
 const iconGithub = document.querySelector('#projects .github i');
 const textGithub = document.querySelector('#projects .card-body span');
 const textCipta = document.querySelectorAll('footer .left p');
+const btnComponentGithub = document.querySelector('#projects #github .card-body button');
 const lamp = document.querySelector('.fa-toggle-off');
 // fungsi addEventListener untuk mengubah mode siang dan malam
 lamp.addEventListener('click', function (event) {
@@ -208,6 +209,8 @@ lamp.addEventListener('click', function (event) {
     lamp.classList.toggle('fa-toggle-on', !isNightMode);
     lamp.classList.toggle('fa-toggle-off', isNightMode);
 
+    btnGithub.style.backgroundColor = colors[isNightMode ? 'night' : 'day'].text;
+    btnGithub.style.color = colors[isNightMode ? 'night' : 'day'].background;
     skillsh5.forEach(l => l.style.color = colors[isNightMode ? 'night' : 'day'].text);
     label.forEach(l => l.style.color = colors[isNightMode ? 'night' : 'day'].text);
     h2.forEach(h => h.style.color = colors[isNightMode ? 'night' : 'day'].text);
