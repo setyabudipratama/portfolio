@@ -353,6 +353,96 @@ document.getElementById('whatsapp').addEventListener('submit', function (e) {
     window.open(url);
 });
 
+
+// Copyright (C) 2024 Setya Budi Pratama
+
+// All rights reserved.
+
+// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
+// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
+
+// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
+
+// DOM
+const cardTextGithub = document.querySelector('#github .card-text');
+cardTextGithub.remove();
+
+// github
+const iconGithubCursor = document.querySelector('#projects #github .fa-square-github');
+iconGithubCursor.style.cursor = 'default';
+// tag button
+const btnGithub = document.createElement('button');
+const cardBodyGithub = document.querySelector('#projects #github .card-body');
+cardBodyGithub.appendChild(btnGithub);
+const textBtnGithub = document.createTextNode('see more');
+btnGithub.appendChild(textBtnGithub);
+Object.assign(btnGithub.style, { 
+    width: '100px',
+    height: '40px',
+    border: 'none',
+    borderRadius: '10px',
+    backgroundColor: '#00098D',
+    color: '#CCD0FF',
+    textTransform: 'capitalize',
+    position: 'relative',
+    overflow: 'hidden',
+    top: '50%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    transition: 'all 0.5s ease 0.2s',
+});
+
+// tag span
+const spanGithub = document.createElement('span');
+btnGithub.appendChild(spanGithub);
+Object.assign(spanGithub.style, {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: '0',
+    height: '0',
+    backgroundColor: 'yellow',
+    color: '#00098D',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: '10px',
+    transition: 'all 0.5s ease',
+});
+
+// tag i
+const iGithub2 = document.createElement('i');
+spanGithub.appendChild(iGithub2);
+iGithub2.setAttribute('class', 'fa-brands fa-github');
+Object.assign(iGithub2.style, {
+    position: 'relative',
+    fontSize: '1.5rem',
+    color: 'black',
+    opacity: '0',
+    transition: 'opacity 0.5s ease',
+});
+
+btnGithub.addEventListener('mouseenter', function () {
+    spanGithub.style.width = '100%';
+    spanGithub.style.height = '100%';
+    iGithub2.style.opacity = '1';
+    btnGithub.style.boxShadow = '0 0 20px yellow';
+});
+btnGithub.addEventListener('mouseleave', function () {
+    spanGithub.style.width = '0';
+    spanGithub.style.height = '0';
+    iGithub2.style.opacity = '0';
+    btnGithub.style.boxShadow = 'none';
+});
+
+const btnComponent = document.querySelector('#projects #github .card-body button');
+btnComponent.addEventListener('click', function () {
+    window.location.href = 'https://github.com/setyabudipratama/component.git';
+});
+
+
 // Copyright (C) 2024 Setya Budi Pratama
 
 // All rights reserved.
@@ -833,8 +923,6 @@ cardProjectHover3.addEventListener('mouseleave', function () {
 
 const github = document.querySelector('#projects .github');
 const iGithub = document.querySelector('#projects .image .fa-square-github');
-const spanGithub = document.querySelector('#projects .github .card-body span');
-github.remove();
 
 // box shadow
 const btnContact = document.querySelector('#contact .btn');
@@ -872,11 +960,6 @@ function applyResponsiveStyles() {
             fontSize: '7rem',
             position: 'relative',
             top: '55%'
-        });
-        Object.assign(spanGithub.style, {
-            position: 'relative',
-            top: '40%',
-            fontSize: '1.2rem'
         });
         Object.assign(github.style, {
             width: '200px',
@@ -1565,23 +1648,3 @@ cardBaru3.addEventListener('mouseleave', function () {
 //     }
 // }`;
 // document.head.appendChild(style);
-
-
-// Copyright (C) 2024 Setya Budi Pratama
-
-// All rights reserved.
-
-// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
-// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
-
-// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
-
-// DOM
-// rubah cardText projets
-const cardTextProjects = document.querySelectorAll('#projects .card-text');
-for (let i = 0; i < cardTextProjects.length; i++) {
-    cardTextProjects[i].innerHTML = '(double-click to see result)';
-};
-
-// const cardTextGithub = document.querySelector('#github .card-text');
-// cardTextGithub.innerHTML = 'See More';
