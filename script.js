@@ -533,13 +533,13 @@ Object.assign(slideProject.style, {
     height: '80vh',
 });
 
-// efek bayangan skills
-const skillIcons = document.querySelectorAll('#skills .icon');
-skillIcons.forEach(icon => {
-    Object.assign(icon.style, {
-        webkitBoxReflect: 'below 5px linear-gradient(transparent, #0005)',
-    });
-});
+// // efek bayangan skills
+// const skillIcons = document.querySelectorAll('#skills .icon');
+// skillIcons.forEach(icon => {
+//     Object.assign(icon.style, {
+//         webkitBoxReflect: 'below 5px linear-gradient(transparent, #0005)',
+//     });
+// });
 
 // DOM
 // ganti hover card project
@@ -954,11 +954,11 @@ function applyResponsiveStyles() {
         Object.assign(slideProject.style, {
             height: '40vh',
         });
-        skillIcons.forEach(icon => {
-            Object.assign(icon.style, {
-                webkitBoxReflect: 'right 1px linear-gradient(transparent, #0005)',
-            });
-        });
+        // skillIcons.forEach(icon => {
+        //     Object.assign(icon.style, {
+        //         webkitBoxReflect: 'right 1px linear-gradient(transparent, #0005)',
+        //     });
+        // });
         Object.assign(iGithub.style, {
             fontSize: '7rem',
             position: 'relative',
