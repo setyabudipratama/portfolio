@@ -1431,6 +1431,153 @@ cardBaru3.addEventListener('mouseleave', function () {
 });
 
 
+// card baru 4
+const cardBaru4 = document.createElement('div');
+cardBaru4.setAttribute('class', 'card');
+// masukkan card baru
+projectSlide.insertBefore(cardBaru4, githubIcon);
+Object.assign(cardBaru4.style, {
+    position: 'relative',
+    top: '20%',
+    width: '310px',
+    height: '140px',
+    cursor: 'default',
+    transition: 'all 0.5s',
+    boxShadow: 'none',
+    border: 'none'
+});
+
+// element class image
+const imageBaru4 = document.createElement('div');
+imageBaru4.setAttribute('class', 'image');
+// masukkan image
+cardBaru4.appendChild(imageBaru4);
+Object.assign(imageBaru4.style, {
+    position: 'relative',
+    top: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '1',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+    boxShadow: '5px 5px 10px black'
+});
+
+// tag img
+const imgBaru4 = document.createElement('img');
+imgBaru4.setAttribute('src', 'gambar/RME.png');
+imgBaru4.setAttribute('alt', 'image');
+// masukkan img
+imageBaru4.appendChild(imgBaru4);
+Object.assign(imgBaru4.style, {
+    width: '100%',
+    height: '100%',
+    margin: '0',
+    objectFit: 'cover',
+    borderRadius: '5px',
+});
+
+// element class card-body
+const cardBodyBaru4 = document.createElement('div');
+cardBodyBaru4.setAttribute('class', 'card-body');
+// masukkan card-body
+cardBaru4.appendChild(cardBodyBaru4);
+Object.assign(cardBodyBaru4.style, {
+    position: 'absolute',
+    bottom: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '0',
+    backgroundColor: '#696ca7',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+});
+
+// tag h5
+const h5Baru4 = document.createElement('h5');
+h5Baru4.setAttribute('class', 'card-title');
+h5Baru4.innerHTML = 'RME (frontend)';
+// masukkan h5
+cardBodyBaru4.appendChild(h5Baru4);
+Object.assign(h5Baru4.style, {
+    position: 'relative',
+    top: '27%',
+    color: '#ffffff'
+});
+
+// tag button
+const buttonBaru4 = document.createElement('button');
+buttonBaru4.appendChild(document.createTextNode('See Result'));
+h5Baru4.after(buttonBaru4);
+Object.assign(buttonBaru4.style, {
+    position: 'relative',
+    top: '20%',
+    color: '#696ca7',
+    width: '100px',
+    height: '30px',
+    backgroundColor: '#ffffff',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    border: 'none',
+    outline: 'none',
+    transition: 'all 0.3s ease',
+});
+buttonBaru4.addEventListener('click', function () {
+    window.location.href = 'https://setyabudipratama.github.io/RME/';
+});
+buttonBaru4.addEventListener('mouseenter', function () {
+    Object.assign(imgBaru4.style, {
+        transform: 'scale(1)',
+    });
+    Object.assign(buttonBaru4.style, {
+        backgroundColor: 'transparent',
+        color: '#ffffff'
+    });
+});
+buttonBaru4.addEventListener('mouseleave', function () {
+    Object.assign(buttonBaru4.style, {
+        backgroundColor: '#ffffff',
+        color: '#696ca7'
+    });
+});
+
+cardBaru4.addEventListener('mouseenter', function () {
+    Object.assign(cardBaru4.style, {
+        transform: 'translateY(-1.5rem)'
+    });
+    Object.assign(cardBodyBaru4.style, {
+        transform: 'translateY(70px)',
+    });
+    Object.assign(imageBaru4.style, {
+        borderRadius: '5px 5px 0 0',
+        boxShadow: 'none'
+    });
+    Object.assign(imgBaru4.style, {
+        borderRadius: '5px 5px 0 0',
+        scale: '1'
+    });
+});
+cardBaru4.addEventListener('mouseleave', function () {
+    Object.assign(cardBaru4.style, {
+        transform: 'translateY(0)'
+    });
+    Object.assign(cardBodyBaru4.style, {
+        borderRadius: '5px',
+        transform: 'translate(0)',
+    });
+    Object.assign(imageBaru4.style, {
+        borderRadius: '5px',
+        boxShadow: '5px 5px 10px black'
+    });
+    Object.assign(imgBaru4.style, {
+        borderRadius: '5px',
+    });
+});
+
+
 // Copyright (C) 2024 Setya Budi Pratama
 
 // All rights reserved.
