@@ -123,7 +123,7 @@ body.style.background = 'transparent';
         // memuat library three.js syarat untuk vanta.js
         await loadScript("https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js", 'sha512-334uBDwY0iZ2TklV1OtDtBW9vp7jjP7SWRzT7Ehu1fdtPIjTpCwTSFb8HI/YBau9L1/kRBEOALrS229Kry4yFQ==');
         // memuat library vanta.js
-        await loadScript("https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js", 'sha512-lH/5/byfwH0bqySiiSINJJoEoWFEBGKgOwsnAlZZPviNJI1DDBVXjPHgEkM0fowfOp6NMBAN4ROAYjx+uEkEjQ==');
+        await loadScript("https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.dots.min.js", 'sha512-fq89yHimK/w687Yjr89Vml8ax1HBNfN1k9IRi/nu91AmCrIWc/yQz5jkJKHoUWxGnuMcMwm7vRY50S7rZsXoDA==');
 
         // elemn div
         const vantaBg = document.createElement('div');
@@ -140,21 +140,18 @@ body.style.background = 'transparent';
         });
 
         // inisiasi evek vanta
-        VANTA.NET({
-            el: vantaBg,
+        VANTA.DOTS({
+            el: "#vanta-bg",
             mouseControls: true,
             touchControls: true,
-            showDots: true,
-            color: 'black',
-            backgroundColor: 'skyblue',
+            gyroControls: false,
             minHeight: 200.00,
             minWidth: 200.00,
             scale: 1.00,
             scaleMobile: 1.00,
-            maxDistance: 30.00,
-            spacing: 20.00,
-            point: 10.00
-        });
+            color: "yellow",
+            backgroundColor: "darkblue"
+        })
     } catch (error) {
         console.error('Failed to load script:', error);
     }
@@ -171,12 +168,15 @@ body.style.background = 'transparent';
 
 //ambil element yang dibutuhkan pada waktu mode siang dan malam
 const h2 = document.querySelectorAll('section.py-5 h2');
+h2.forEach(h => h.style.color = '#CCD0FF');
 const label = document.querySelectorAll('section.py-5 label');
+label.forEach(l => l.style.color = '#CCD0FF');
 const skillsh5 = document.querySelectorAll('#skills h5');
-const iconGithub = document.querySelector('#projects .github i');
-const textGithub = document.querySelector('#projects .card-body span');
+skillsh5.forEach(sh5 => sh5.style.color = '#CCD0FF');
+const iconGithub = document.querySelector('#projects #github .image i');
+iconGithub.style.color = '#CCD0FF';
 const textCipta = document.querySelectorAll('footer .left p');
-const btnComponentGithub = document.querySelector('#projects #github .card-body button');
+textCipta.forEach(tc => tc.style.color = '#CCD0FF');
 const lamp = document.querySelector('.fa-toggle-off');
 // fungsi addEventListener untuk mengubah mode siang dan malam
 lamp.addEventListener('click', function (event) {
@@ -198,11 +198,11 @@ lamp.addEventListener('click', function (event) {
     const colors = {
         day: {
             background: '#0C001F',
-            text: '#CCD0FF'
+            text: '#FFFFFF'
         },
         night: {
             background: '#D0B1FF',
-            text: '#00098D'
+            text: '#CCD0FF'
         }
     };
 
@@ -210,12 +210,10 @@ lamp.addEventListener('click', function (event) {
     lamp.classList.toggle('fa-toggle-off', isNightMode);
 
     btnGithub.style.backgroundColor = colors[isNightMode ? 'night' : 'day'].text;
-    btnGithub.style.color = colors[isNightMode ? 'night' : 'day'].background;
     skillsh5.forEach(l => l.style.color = colors[isNightMode ? 'night' : 'day'].text);
     label.forEach(l => l.style.color = colors[isNightMode ? 'night' : 'day'].text);
     h2.forEach(h => h.style.color = colors[isNightMode ? 'night' : 'day'].text);
     iconGithub.style.color = colors[isNightMode ? 'night' : 'day'].text;
-    textGithub.style.color = colors[isNightMode ? 'night' : 'day'].text;
     textCipta.forEach(t => t.style.color = colors[isNightMode ? 'night' : 'day'].text);
 });
 
@@ -384,8 +382,8 @@ Object.assign(btnGithub.style, {
     height: '40px',
     border: 'none',
     borderRadius: '10px',
-    backgroundColor: '#00098D',
-    color: '#CCD0FF',
+    backgroundColor: '#CCD0FF',
+    color: '#000000',
     textTransform: 'capitalize',
     position: 'relative',
     overflow: 'hidden',
