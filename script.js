@@ -1577,6 +1577,7 @@ cardBaru4.addEventListener('mouseleave', function () {
 
 
 document.querySelector('#sertifikat').remove()
+document.querySelector('nav li:nth-child(4').remove()
 
 
 // card baru 5
