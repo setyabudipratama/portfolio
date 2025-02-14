@@ -468,19 +468,41 @@ Object.assign(textHeader.style, {
     background: 'none',
     backdropFilter: 'none',
 })
-h2Header.style.animation = 'shake 2s ease-in-out infinite';
-pHeader.style.animation = 'shake 2s ease-in-out infinite';
-const styleHeader = document.createElement('style');
-styleHeader.innerHTML = `
-    @keyframes shake {
-    0%, 100% {
-        transform: translateY(-5px);
+Object.assign(h2Header.style, {
+    width: '0',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+    animation: 'typing 2.5s steps(25, end) forwards',
+})
+Object.assign(pHeader.style, {
+    width: '0',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
+    animation: 'typing2 2s steps(23, end) 2.5s forwards',
+})
+const header = document.createElement('style')
+header.innerHTML = `
+    @keyframes typing {
+    form {
+    width: 0
     }
-    50% {
-        transform: translateY(5px);
+    to {
+    width: 25ch
     }
-}`;
-document.head.appendChild(styleHeader);
+}`
+document.head.appendChild(header);
+const header2 = document.createElement('style')
+header2.innerHTML = `
+    @keyframes typing2 {
+    form {
+    width: 0
+    }
+    to {
+    width: 23ch
+    }
+}`
+document.head.appendChild(header2)
+
 
 // DOM
 // update skill html, css dan javascript
