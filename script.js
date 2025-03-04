@@ -556,6 +556,7 @@ Object.assign(slideProject.style, {
 });
 
 document.querySelector('#about .container .profil img').setAttribute('src', 'gambar/IMG_20240610_232649.webp');
+document.querySelector('footer .left img').setAttribute('src', 'gambar/IMG_20240610_232649.webp');
 
 
 // DOM
