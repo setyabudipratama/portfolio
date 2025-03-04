@@ -1818,7 +1818,7 @@ Object.assign(cardBodyBaru6.style, {
 // tag h5
 const h5Baru6 = document.createElement('h5');
 h5Baru6.setAttribute('class', 'card-title');
-h5Baru6.innerHTML = 'Limbah Medis (frontend)';
+h5Baru6.innerHTML = 'fisioterapiApp (frontend)';
 // masukkan h5
 cardBodyBaru6.appendChild(h5Baru6);
 Object.assign(h5Baru6.style, {
