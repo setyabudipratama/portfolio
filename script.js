@@ -503,6 +503,8 @@ header2.innerHTML = `
 }`
 document.head.appendChild(header2)
 
+document.querySelector('header').style.background = 'transparent'
+
 
 // DOM
 // update skill html, css dan javascript
@@ -553,13 +555,8 @@ Object.assign(slideProject.style, {
     height: '80vh',
 });
 
-// // efek bayangan skills
-// const skillIcons = document.querySelectorAll('#skills .icon');
-// skillIcons.forEach(icon => {
-//     Object.assign(icon.style, {
-//         webkitBoxReflect: 'below 5px linear-gradient(transparent, #0005)',
-//     });
-// });
+document.querySelector('#about .container .profil img').setAttribute('src', 'gambar/IMG_20240610_232649.webp');
+
 
 // DOM
 // ganti hover card project
@@ -590,6 +587,8 @@ Object.assign(imageCardHover1.style, {
     transition: 'all 0.5s ease',
     boxShadow: '5px 5px 10px black'
 });
+
+document.querySelector('#projects .card .image img').setAttribute('src', 'gambar/website ejen.webp');
 
 const imgProjectHover1 = document.querySelector('#projects .card .image img');
 Object.assign(imgProjectHover1.style, {
@@ -719,6 +718,8 @@ Object.assign(imageCardHover2.style, {
     boxShadow: '5px 5px 10px black'
 });
 
+document.querySelector('#projects .card:nth-child(2) .image img').setAttribute('src', 'gambar/website furniture.webp');
+
 const imgProjectHover2 = document.querySelector('#projects .card:nth-child(2) .image img');
 Object.assign(imgProjectHover2.style, {
     width: '100%',
@@ -845,6 +846,8 @@ Object.assign(imageCardHover3.style, {
     transition: 'all 0.5s ease',
     boxShadow: '5px 5px 10px black'
 });
+
+document.querySelector('#projects .card:nth-child(3) .image img').setAttribute('src', 'gambar/website property.webp');
 
 const imgProjectHover3 = document.querySelector('#projects .card:nth-child(3) .image img');
 Object.assign(imgProjectHover3.style, {
@@ -1044,7 +1047,7 @@ Object.assign(imageBaru.style, {
 
 // tag img
 const imgBaru = document.createElement('img');
-imgBaru.setAttribute('src', 'gambar/website company.png');
+imgBaru.setAttribute('src', 'gambar/website company.webp');
 imgBaru.setAttribute('alt', 'image');
 // masukkan img
 imageBaru.appendChild(imgBaru);
@@ -1191,7 +1194,7 @@ Object.assign(imageBaru2.style, {
 
 // tag img
 const imgBaru2 = document.createElement('img');
-imgBaru2.setAttribute('src', 'gambar/website wisata.png');
+imgBaru2.setAttribute('src', 'gambar/website wisata.webp');
 imgBaru2.setAttribute('alt', 'image');
 // masukkan img
 imageBaru2.appendChild(imgBaru2);
@@ -1338,7 +1341,7 @@ Object.assign(imageBaru3.style, {
 
 // tag img
 const imgBaru3 = document.createElement('img');
-imgBaru3.setAttribute('src', 'gambar/website mobil.png');
+imgBaru3.setAttribute('src', 'gambar/website mobil.webp');
 imgBaru3.setAttribute('alt', 'image');
 // masukkan img
 imageBaru3.appendChild(imgBaru3);
@@ -1485,7 +1488,7 @@ Object.assign(imageBaru4.style, {
 
 // tag img
 const imgBaru4 = document.createElement('img');
-imgBaru4.setAttribute('src', 'gambar/RME.png');
+imgBaru4.setAttribute('src', 'gambar/RME.webp');
 imgBaru4.setAttribute('alt', 'image');
 // masukkan img
 imageBaru4.appendChild(imgBaru4);
@@ -1636,7 +1639,7 @@ Object.assign(imageBaru5.style, {
 
 // tag img
 const imgBaru5 = document.createElement('img');
-imgBaru5.setAttribute('src', 'gambar/website limbah medis.png');
+imgBaru5.setAttribute('src', 'gambar/website limbah medis.webp');
 imgBaru5.setAttribute('alt', 'image');
 // masukkan img
 imageBaru5.appendChild(imgBaru5);
@@ -1744,6 +1747,153 @@ cardBaru5.addEventListener('mouseleave', function () {
         boxShadow: '5px 5px 10px black'
     });
     Object.assign(imgBaru5.style, {
+        borderRadius: '5px',
+    });
+});
+
+
+// card baru 6
+const cardBaru6 = document.createElement('div');
+cardBaru6.setAttribute('class', 'card');
+// masukkan card baru
+projectSlide.insertBefore(cardBaru6, githubIcon);
+Object.assign(cardBaru6.style, {
+    position: 'relative',
+    top: '20%',
+    width: '310px',
+    height: '140px',
+    cursor: 'default',
+    transition: 'all 0.5s',
+    boxShadow: 'none',
+    border: 'none'
+});
+
+// element class image
+const imageBaru6 = document.createElement('div');
+imageBaru6.setAttribute('class', 'image');
+// masukkan image
+cardBaru6.appendChild(imageBaru6);
+Object.assign(imageBaru6.style, {
+    position: 'relative',
+    top: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '1',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+    boxShadow: '5px 5px 10px black'
+});
+
+// tag img
+const imgBaru6 = document.createElement('img');
+imgBaru6.setAttribute('src', 'gambar/fisioApp.webp');
+imgBaru6.setAttribute('alt', 'image');
+// masukkan img
+imageBaru6.appendChild(imgBaru6);
+Object.assign(imgBaru6.style, {
+    width: '100%',
+    height: '100%',
+    margin: '0',
+    objectFit: 'cover',
+    borderRadius: '5px',
+});
+
+// element class card-body
+const cardBodyBaru6 = document.createElement('div');
+cardBodyBaru6.setAttribute('class', 'card-body');
+// masukkan card-body
+cardBaru6.appendChild(cardBodyBaru6);
+Object.assign(cardBodyBaru6.style, {
+    position: 'absolute',
+    bottom: '0',
+    width: '100%',
+    height: '100%',
+    zIndex: '0',
+    backgroundColor: '#696ca7',
+    borderRadius: '5px',
+    transition: 'all 0.5s ease',
+});
+
+// tag h5
+const h5Baru6 = document.createElement('h5');
+h5Baru6.setAttribute('class', 'card-title');
+h5Baru6.innerHTML = 'Limbah Medis (frontend)';
+// masukkan h5
+cardBodyBaru6.appendChild(h5Baru6);
+Object.assign(h5Baru6.style, {
+    position: 'relative',
+    top: '27%',
+    color: '#ffffff'
+});
+
+// tag button
+const buttonBaru6 = document.createElement('button');
+buttonBaru6.appendChild(document.createTextNode('See Result'));
+h5Baru6.after(buttonBaru6);
+Object.assign(buttonBaru6.style, {
+    position: 'relative',
+    top: '20%',
+    color: '#696ca7',
+    width: '100px',
+    height: '30px',
+    backgroundColor: '#ffffff',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    border: 'none',
+    outline: 'none',
+    transition: 'all 0.3s ease',
+});
+buttonBaru6.addEventListener('click', function () {
+    window.location.href = 'https://setyabudipratama.github.io/fisioApp';
+});
+buttonBaru6.addEventListener('mouseenter', function () {
+    Object.assign(imgBaru6.style, {
+        transform: 'scale(1)',
+    });
+    Object.assign(buttonBaru6.style, {
+        backgroundColor: 'transparent',
+        color: '#ffffff'
+    });
+});
+buttonBaru6.addEventListener('mouseleave', function () {
+    Object.assign(buttonBaru6.style, {
+        backgroundColor: '#ffffff',
+        color: '#696ca7'
+    });
+});
+
+cardBaru6.addEventListener('mouseenter', function () {
+    Object.assign(cardBaru6.style, {
+        transform: 'translateY(-1.5rem)'
+    });
+    Object.assign(cardBodyBaru6.style, {
+        transform: 'translateY(70px)',
+    });
+    Object.assign(imageBaru6.style, {
+        borderRadius: '5px 5px 0 0',
+        boxShadow: 'none'
+    });
+    Object.assign(imgBaru6.style, {
+        borderRadius: '5px 5px 0 0',
+        scale: '1'
+    });
+});
+cardBaru6.addEventListener('mouseleave', function () {
+    Object.assign(cardBaru6.style, {
+        transform: 'translateY(0)'
+    });
+    Object.assign(cardBodyBaru6.style, {
+        borderRadius: '5px',
+        transform: 'translate(0)',
+    });
+    Object.assign(imageBaru6.style, {
+        borderRadius: '5px',
+        boxShadow: '5px 5px 10px black'
+    });
+    Object.assign(imgBaru6.style, {
         borderRadius: '5px',
     });
 });
