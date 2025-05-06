@@ -71,27 +71,21 @@ window.addEventListener('scroll', function () {
     });
 });
 
+
 // ambil parent
 const iconHtml = document.querySelector('#skills .icon:first-child i');
 const iconCss = document.querySelector('#skills .icon:nth-child(2) i');
 const iconJavascript = document.querySelector('#skills .icon:nth-child(3) i');
+const iconVue = document.querySelector('#skills .icon:nth-child(4) i');
 // merubah warna icon di halaman skills
 iconHtml.style.color = 'red';
 iconCss.style.color = 'blue';
 iconJavascript.style.color = 'yellow';
+iconVue.style.color = '#42B883';
 
-
-// Copyright (C) 2024 Setya Budi Pratama
-
-// All rights reserved.
-
-// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
-// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
-
-// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
 
 // DOM
-document.querySelector('.background').remove();
+// document.querySelector('.background').remove();
 const spanBg = document.querySelectorAll('.background span');
 spanBg.forEach(span => {
     span.remove();
@@ -106,8 +100,8 @@ body.style.background = 'transparent';
         const script = document.createElement('script');
         script.src = src;
         script.integrity = integrity,
-        script.crossOrigin = 'anonymous',
-        script.referrerPolicy = 'no-referrer'
+            script.crossOrigin = 'anonymous',
+            script.referrerPolicy = 'no-referrer'
 
         // menambahkan ke head
         document.head.appendChild(script);
@@ -157,14 +151,6 @@ body.style.background = 'transparent';
     }
 })();
 
-// Copyright (C) 2024 Setya Budi Pratama
-
-// All rights reserved.
-
-// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
-// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
-
-// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
 
 //ambil element yang dibutuhkan pada waktu mode siang dan malam
 const h2 = document.querySelectorAll('section.py-5 h2');
@@ -209,16 +195,20 @@ lamp.addEventListener('click', function (event) {
     lamp.classList.toggle('fa-toggle-on', !isNightMode);
     lamp.classList.toggle('fa-toggle-off', isNightMode);
 
+    // body.style.backgroundColor = colors[isNightMode ? 'night' : 'day'].background;
     btnGithub.style.backgroundColor = colors[isNightMode ? 'night' : 'day'].text;
-    skillsh5.forEach(l => l.style.color = colors[isNightMode ? 'night' : 'day'].text);
+    // btnGithub.style.color = colors[isNightMode ? 'night' : 'day'].background;
+    skillsh5.forEach(h => h.style.color = colors[isNightMode ? 'night' : 'day'].text);
     label.forEach(l => l.style.color = colors[isNightMode ? 'night' : 'day'].text);
     h2.forEach(h => h.style.color = colors[isNightMode ? 'night' : 'day'].text);
     iconGithub.style.color = colors[isNightMode ? 'night' : 'day'].text;
+    // textGithub.style.color = colors[isNightMode ? 'night' : 'day'].text;
     textCipta.forEach(t => t.style.color = colors[isNightMode ? 'night' : 'day'].text);
 });
 
 
 // DOM
+// menambahkan icon baru 'instagram' diawal child
 // buat tag li baru
 const liBaru = document.createElement('li');
 // ambil parent
@@ -263,6 +253,7 @@ instagram.setAttribute('class', 'fa-brands fa-instagram');
 instagram.style.color = 'yellow';
 
 
+// mangganti icon lokasi dengan icon github
 // ambil parent
 const lokasi = document.querySelector('.social li:last-child');
 // hapus kelas
@@ -280,7 +271,7 @@ textGit.innerHTML = 'setyabudipratama';
 // ambil parent
 const aGit = document.querySelector('footer li:last-child a');
 // tambah teks
-aGit.href = 'https://github.com/setyabudipratama/project.git';
+aGit.href = 'https://github.com/setyabudipratama/';
 
 // ambil parent
 const Git = document.querySelector('footer li:last-child i');
@@ -292,6 +283,7 @@ Git.setAttribute('class', 'fa-brands fa-github');
 Git.style.color = 'white';
 
 
+// mengganti icon telepon dengan icon linkedin
 // ambil parent
 const telepon = document.querySelector('footer .social li:nth-child(3)');
 // hapus kelas
@@ -320,14 +312,6 @@ linkIn.setAttribute('class', 'fa-brands fa-linkedin');
 // ubah warna
 linkIn.style.color = 'skyblue';
 
-// Copyright (C) 2024 Setya Budi Pratama
-
-// All rights reserved.
-
-// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
-// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
-
-// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
 
 // ambil parent
 const kontak = document.querySelector('#contact form');
@@ -355,15 +339,6 @@ document.getElementById('whatsapp').addEventListener('submit', function (e) {
 });
 
 
-// Copyright (C) 2024 Setya Budi Pratama
-
-// All rights reserved.
-
-// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
-// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
-
-// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
-
 // DOM
 const cardTextGithub = document.querySelector('#github .card-text');
 cardTextGithub.remove();
@@ -373,6 +348,7 @@ const iconGithubCursor = document.querySelector('#projects #github .fa-square-gi
 iconGithubCursor.style.cursor = 'default';
 // tag button
 const btnGithub = document.createElement('button');
+btnGithub.style.backgroundColor = '#CCD0FF';
 const cardBodyGithub = document.querySelector('#projects #github .card-body');
 cardBodyGithub.appendChild(btnGithub);
 const textBtnGithub = document.createTextNode('see more');
@@ -444,21 +420,6 @@ btnComponent.addEventListener('click', function () {
 });
 
 
-// Copyright (C) 2024 Setya Budi Pratama
-
-// All rights reserved.
-
-// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
-// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
-
-// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
-
-const projects = document.getElementById('github');
-projects.addEventListener('click', function () {
-    window.location.href = 'https://github.com/setyabudipratama/component.git';
-});
-
-
 // DOM
 // animation header
 const textHeader = document.querySelector('header .text');
@@ -490,7 +451,7 @@ header.innerHTML = `
     width: 25ch
     }
 }`
-document.head.appendChild(header);
+document.head.appendChild(header)
 const header2 = document.createElement('style')
 header2.innerHTML = `
     @keyframes typing2 {
@@ -522,6 +483,7 @@ htmlValue.style.width = '95%';
 cssValue.style.width = '95%';
 jsValue.style.width = '75%';
 
+// DOM
 // border radius class box
 const boxAboutUs = document.querySelector('#about .box');
 const profilAboutUs = document.querySelector('#about .box .profil');
@@ -969,21 +931,16 @@ btnContact.addEventListener('click', function () {
 
 function applyResponsiveStyles() {
     if (window.innerWidth < 767) {
-        Object.assign(h2Header.style, {
-            fontSize: '1rem'
-        });
-        Object.assign(pHeader.style, {
-            fontSize: '0.8rem'
-        });
+        // Object.assign(h2Header.style, {
+        //     fontSize: '1rem'
+        // });
+        // Object.assign(pHeader.style, {
+        //     fontSize: '0.8rem'
+        // });
         pAboutUs.style.width = '210px';
         Object.assign(slideProject.style, {
             height: '40vh',
         });
-        // skillIcons.forEach(icon => {
-        //     Object.assign(icon.style, {
-        //         webkitBoxReflect: 'right 1px linear-gradient(transparent, #0005)',
-        //     });
-        // });
         Object.assign(iGithub.style, {
             fontSize: '7rem',
             position: 'relative',
@@ -1000,20 +957,10 @@ function applyResponsiveStyles() {
 window.onload = applyResponsiveStyles;
 
 
-// Copyright (C) 2024 Setya Budi Pratama
-
-// All rights reserved.
-
-// This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited.
-// You may not decompile, reverse engineer, disassemble, or otherwise attempt to derive the source code of this software.
-
-// This software may not be used, copied, modified, or distributed in any form without the prior written consent of the copyright holder.
-
 // DOM
 // card Project baru
 const projectSlide = document.querySelector('#projects .slide');
 const githubIcon = document.getElementById('github');
-
 
 // card baru
 const cardBaru = document.createElement('div');
@@ -1603,8 +1550,8 @@ cardBaru4.addEventListener('mouseleave', function () {
 });
 
 
-document.querySelector('#sertifikat').remove()
-document.querySelector('nav li:nth-child(4').remove()
+// document.querySelector('#sertifikat').remove()
+// document.querySelector('nav li:nth-child(4').remove()
 
 
 // card baru 5
@@ -1819,7 +1766,7 @@ Object.assign(cardBodyBaru6.style, {
 // tag h5
 const h5Baru6 = document.createElement('h5');
 h5Baru6.setAttribute('class', 'card-title');
-h5Baru6.innerHTML = 'fisioterapiApp (frontend)';
+h5Baru6.innerHTML = 'Limbah Medis (frontend)';
 // masukkan h5
 cardBodyBaru6.appendChild(h5Baru6);
 Object.assign(h5Baru6.style, {
