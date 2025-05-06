@@ -24,19 +24,20 @@ Undang-Undang No. 28 Tahun 2014 tentang Hak Cipta
 Di Indonesia, hak cipta dilindungi oleh Undang-Undang No. 28 tahun 2014. Undang-undang ini memberikan perlindungan terhadap karya-karya berhak cipta di bidang ilmu pengetahuan, seni, dan sastra. */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    /* border: 1px dotted black; */
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #d0b2ff;
+    background: transparent;
     font-family: Arial, sans-serif;
 }
 
 /* class background */
-body .background {
+/* body .background {
     position: fixed;
     top: 0;
     left: 0;
@@ -44,7 +45,6 @@ body .background {
     height: 100%;
 }
 
-/* tag span */
 .background span {
     position: absolute;
     top: 0;
@@ -58,12 +58,12 @@ body .background {
     animation: cube 13s ease-in forwards infinite;
 }
 
-/* keyframes cube */
 @keyframes cube {
     from {
         transform: scale(0) rotate(0deg) translate(-50%, -50%);
         opacity: 1;
     }
+
     to {
         transform: scale(20) rotate(960deg) translate(-50%, -50%);
         opacity: 0;
@@ -117,7 +117,7 @@ body .background {
     top: 70%;
     left: 80%;
     border-color: #ffffff;
-}
+} */
 
 /* halaman header */
 header {
@@ -128,7 +128,7 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    background: url('gambar/31-08-23.jpg') no-repeat center center/cover;
+    /* background: url('gambar/31-08-23.jpg') no-repeat center center/cover; */
     /* background-blend-mode: darken; */
     z-index: 0;
 }
@@ -143,7 +143,7 @@ header .text {
     background: transparent;
     backdrop-filter: blur(1rem);
     padding: 5px;
-    margin: 0 300px;
+    margin: 0 250px;
     border-radius: 10px;
 }
 
@@ -151,13 +151,24 @@ header .text h2 {
     font-size: 1.8rem;
     color: #ffffff;
     text-shadow: 0 0 10px cyan;
+    /* animation: shake 1.5s ease-in-out infinite; */
 }
 
 header .text p {
     font-size: 1.2rem;
     color: #ffffff;
     text-shadow: 0 0 5px cyan;
+    /* animation: shake 1.5s ease-in-out infinite; */
 }
+
+/* @keyframes shake {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+} */
 
 /* tag h1 */
 header h1 {
@@ -188,11 +199,12 @@ header p {
 .navbar {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     position: sticky;
     top: 0;
     width: 100%;
     height: 7vh;
-    background-color: #1530b3;
+    background-color: rgb(50, 50, 255);
     font-weight: bold;
     padding: 0;
     margin: 0;
@@ -277,11 +289,13 @@ header p {
     height: 380px;
     margin: 10px auto 30px auto;
     z-index: 1;
-    border-radius: 20px;
+    /* border-radius: 20px; */
+    border-radius: 97% 3% 97% 3% / 5% 95% 5% 95%;
     overflow: hidden;
     /* opacity: 0;
     transform: translateX(100%);
     transition: all 0.5s ease-in-out; */
+    /* animation: morph 4s linear infinite; DOM */
 }
 
 /* #about .box.active {
@@ -295,10 +309,9 @@ header p {
     position: absolute;
     top: 2%;
     left: -25%;
+    border-radius: 20px;
     width: 75%;
     height: 180px;
-    /* border-radius: 20px; */
-    border-radius: 97% 3% 97% 3% / 5% 95% 5% 95%;
     background: linear-gradient(0deg, transparent, transparent, yellow, yellow, yellow);
     z-index: 1;
     transform-origin: bottom right;
@@ -385,10 +398,26 @@ header p {
     /* border-radius: 17px; */
     border-radius: 97% 3% 97% 3% / 5% 95% 5% 95%;
     z-index: 2;
-    /* background-image: linear-gradient(145deg, darkblue 0%, blue 50%, lightblue 100%); */
+    /* background-image: linear-gradient(145deg, darkblue 0%, blue 50%, lightblue 100%); DOM */
     background: conic-gradient(from 270deg at 50%, lightblue 0%, teal 50%, blue 100%);
     /* box-shadow: inset 10px 10px 30px #000000; */
+    /* animation: morph 4s linear infinite; DOM */
 }
+
+/* @keyframes morph {
+    0%, 100% {
+        border-radius: 50%;
+    }
+    25% {
+        border-radius: 30% 70% 70% 30% / 30% 70% 30% 70%;
+    }
+    50% {
+        border-radius: 70% 30% 30% 70% / 70% 30% 70% 30%;
+    }
+    75% {
+        border-radius: 50% 50% 30% 50%;
+    }
+} DOM */
 
 /* tag img */
 #about .profil img {
@@ -581,6 +610,7 @@ header p {
     transition: all 0.3s ease;
 }
 
+
 #projects .card:hover {
     background-color: #9fa1d5;
     color: #272727;
@@ -659,6 +689,7 @@ header p {
     padding: 5px;
 }
 
+
 /* class github */
 #projects .github {
     flex-grow: 1;
@@ -673,6 +704,7 @@ header p {
     align-items: center;
 }
 
+/* class image */
 #projects .github .image {
     width: 100px;
     height: 100px;
@@ -683,7 +715,7 @@ header p {
 }
 
 /* class fa-github */
-#projects .github .image .fa-square-github {
+#projects .image .fa-square-github {
     font-size: 10rem;
     color: #00098D;
     position: relative;
@@ -842,7 +874,7 @@ header p {
 /* tag h2 */
 #contact h2 {
     position: relative;
-    top: -20px;
+    top: 0;
     font-size: 1.7rem;
     font-family: 'Pacifico';
 }
@@ -854,7 +886,7 @@ header p {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -20px;
+    top: 0;
 }
 
 /* class form-group */
@@ -893,12 +925,14 @@ header p {
     transition: box-shadow 0.3s ease;
     border-radius: 10px;
     border: 3px solid;
-    animation: animateSpin 3s linear infinite; /* menambahkan efek spin */
+    animation: animateSpin 3s linear infinite;
+    /* menambahkan efek spin */
 }
 
 @keyframes animateSpin {
     0% {
-        border-color: yellow; /* warna border berubah */
+        border-color: yellow;
+        /* warna border berubah */
     }
 
     30% {
@@ -1094,7 +1128,7 @@ p {
 }
 
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
 
     header {
         position: relative;
@@ -1111,18 +1145,18 @@ p {
     }
 
     header .text h2 {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     header .text p {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .navbar {
         position: sticky;
         top: 0;
         width: 100%;
-        height: 5vh;
+        height: 7vh;
         background-color: #2942c0;
         z-index: 1000;
     }
@@ -1197,13 +1231,13 @@ p {
 
     #about h2 {
         font-size: 1.5rem;
-        top: -30px;
+        top: 0;
         left: 0;
     }
 
     #about .container {
         position: relative;
-        top: 0;
+        top: 10%;
         left: 0;
     }
 
@@ -1213,10 +1247,10 @@ p {
         left: 0;
         width: 80%;
         height: 300px;
-        /* border-radius: 20px; */
-        border-radius: 97% 3% 97% 3% / 5% 95% 5% 95%;
         margin: 20px auto 20px auto;
         z-index: 1;
+        /* border-radius: 20px; */
+        border-radius: 97% 3% 97% 3% / 5% 95% 5% 95%;
         overflow: hidden;
     }
 
@@ -1384,6 +1418,11 @@ p {
 
     footer {
         width: 100%;
+        padding: 0;
+        /* position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #1530b3; */
     }
 
     footer .left {
@@ -1396,7 +1435,7 @@ p {
     }
 
     footer .left p {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 
     footer .social {
@@ -1447,7 +1486,7 @@ p {
         position: sticky;
         top: 0;
         width: 100%;
-        height: 5vh;
+        height: 7vh;
         background-color: #2942c0;
         z-index: 1000;
     }
@@ -1533,10 +1572,10 @@ p {
         left: 0;
         width: 60%;
         height: 300px;
-        /* border-radius: 20px; */
-        border-radius: 97% 3% 97% 3% / 5% 95% 5% 95%;
         margin: 20px auto 20px auto;
         z-index: 1;
+        /* border-radius: 20px; */
+        border-radius: 97% 3% 97% 3% / 5% 95% 5% 95%;
         overflow: hidden;
     }
 
