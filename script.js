@@ -472,9 +472,11 @@ document.querySelector('header').style.background = 'transparent'
 const htmlText = document.querySelector('#skills .icon:first-child h5:last-child');
 const cssText = document.querySelector('#skills .icon:nth-child(2) h5:last-child');
 const jsText = document.querySelector('#skills .icon:nth-child(3) h5:last-child');
-htmlText.innerHTML = '95%';
-cssText.innerHTML = '95%';
+const vueText = document.querySelector('#skills .icon:nth-child(4) h5:last-child');
+htmlText.innerHTML = '99%';
+cssText.innerHTML = '99%';
 jsText.innerHTML = '75%';
+vueText.innerHTML = '99%';
 
 const htmlValue = document.querySelector('#skills .icon:first-child #skills-progress-fill');
 const cssValue = document.querySelector('#skills .icon:nth-child(2) #skills-progress-fill');
