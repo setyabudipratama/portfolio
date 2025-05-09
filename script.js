@@ -481,9 +481,12 @@ vueText.innerHTML = '99%';
 const htmlValue = document.querySelector('#skills .icon:first-child #skills-progress-fill');
 const cssValue = document.querySelector('#skills .icon:nth-child(2) #skills-progress-fill');
 const jsValue = document.querySelector('#skills .icon:nth-child(3) #skills-progress-fill');
-htmlValue.style.width = '95%';
-cssValue.style.width = '95%';
+const vueValue = document.querySelector('#skills .icon:nth-child(4) #skills-progress-fill');
+htmlValue.style.width = '99%';
+cssValue.style.width = '99%';
 jsValue.style.width = '75%';
+vueValue.style.width = '99%';
+
 
 // DOM
 // border radius class box
